@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Upixto</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -49,13 +49,37 @@
       pointer-events: none;
     }
 
+    /* Menu latéral */
+    .side-menu {
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 100;
+    }
+    .side-menu .dot {
+      width: 12px;
+      height: 12px;
+      background-color: #ccc;
+      border-radius: 50%;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+    }
+    .side-menu .dot.active {
+      background-color: #000;
+      transform: scale(1.5);
+    }
   </style>
 </head>
 <body class="bg-white text-black font-sans tracking-tight">
 
-  <!-- Loader -->
-  <div id="loader">
-    <h1 class="text-4xl font-extrabold text-black">Upixto</h1>
+  <div class="side-menu">
+    <div class="dot" data-section="1"></div>
+    <div class="dot" data-section="2"></div>
+    <div class="dot" data-section="3"></div>
   </div>
 
   <!-- Section 1 : Intro -->
@@ -97,13 +121,13 @@
 
     <!-- Footer intégré -->
     <div class="mt-12 text-center text-sm text-gray-400">
-		<div class="flex justify-center space-x-6 mb-4">
-		  <a href="https://www.github.com/upixto" target="_blank" aria-label="GitHub">
-			<img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" class="h-5 w-5">
-		  </a>
-		</div>
-		© 2025 Upixto. Tous droits réservés.
-	  </div>
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="https://www.github.com/upixto" target="_blank" aria-label="GitHub">
+          <img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" class="h-5 w-5">
+        </a>
+      </div>
+      © 2025 Upixto. Tous droits réservés.
+    </div>
   </section>
 
   <!-- AOS animation lib -->
@@ -117,6 +141,32 @@
     window.addEventListener('load', () => {
       document.getElementById('loader').classList.add('hide');
     });
+
+    const dots = document.querySelectorAll('.side-menu .dot');
+    const sections = document.querySelectorAll('section');
+
+    // Met à jour l'état actif des points
+    const updateActiveDot = () => {
+      let index = sections.length;
+
+      while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[index].classList.add('active');
+    };
+
+    // Ajoute un événement de clic pour chaque point
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        sections[i].scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Met à jour les points lors du défilement
+    window.addEventListener('scroll', updateActiveDot);
+
+    // Initialisation
+    updateActiveDot();
   </script>
 </body>
 </html>
