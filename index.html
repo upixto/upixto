@@ -86,41 +86,54 @@
   <section class="h-screen flex flex-col justify-center items-center text-center px-6">
     <h1 class="text-6xl md:text-7xl font-extrabold mb-4 fade-in">Upixto</h1>
     <p class="text-xl md:text-2xl text-gray-700 max-w-2xl fade-in" style="animation-delay: 0.3s;">
-      Des solutions digitales sur mesure pour faire évoluer votre activité.
+      Des solutions digitales sur mesure pour accompagner votre activité au quotidien.
     </p>
   </section>
 
-  <!-- Section 2 : Réalisations -->
+  <!-- Section 2 : Champs d'actions -->
   <section class="h-screen flex flex-col justify-center items-center bg-gray-50 text-center px-6">
-    <h2 class="text-4xl font-semibold mb-12 fade-in">Réalisations</h2>
+    <h2 class="text-4xl font-semibold mb-4 fade-in">Nos champs d'action</h2>
+	<p class="text-lg text-gray-600 mb-12 fade-in" style="animation-delay: 0.1s;">
+	  Nous proposons une gamme complète de services pour répondre à vos besoins numériques.
+	</p>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl w-full">
       <div class="fade-in">
-        <h3 class="text-xl font-medium mb-2">CRM Assurance</h3>
-        <p class="text-gray-600">CRM sur mesure pour un courtier en assurances.</p>
+		<img src="img/solutions-sur-mesure.png" alt="Solutions sur mesure" class="mb-4 rounded-lg shadow-lg w-64 h-64 object-contain mx-auto">
+        <h3 class="text-xl font-medium mb-2">Solutions sur mesure</h3>
+        <p class="text-gray-600">Applications personnalisées pour répondre aux demandes les plus complexes</p>
       </div>
       <div class="fade-in" style="animation-delay: 0.2s;">
+		<img src="img/assistance-informatique.png" alt="Assistance informatique" class="mb-4 rounded-lg shadow-lg w-64 h-64 object-contain mx-auto">
         <h3 class="text-xl font-medium mb-2">Assistance informatique</h3>
-        <p class="text-gray-600">Service de support dédié pour PME locale.</p>
+        <p class="text-gray-600">Service de support dédié pour toute entreprise</p>
       </div>
       <div class="fade-in" style="animation-delay: 0.4s;">
+		<img src="img/digitalisation-entreprise.png" alt="Digitalisation d'entreprise" class="mb-4 rounded-lg shadow-lg w-64 h-64 object-contain mx-auto">
         <h3 class="text-xl font-medium mb-2">Digitalisation d'entreprise</h3>
-        <p class="text-gray-600">Accompagnement stratégique dans la transition numérique.</p>
+        <p class="text-gray-600">Accompagnement stratégique dans la transition numérique</p>
       </div>
     </div>
   </section>
+<!-- Section 3 : Contact + Footer -->
+<section class="h-screen flex flex-col justify-center items-center bg-black text-white px-6">
+	<div class="mt-12 flex flex-col items-center justify-center w-full max-w-6xl h-full">
+		<div class="w-full md:w--0 flex flex-col items-center">
+			<h2 class="text-4xl font-semibold mb-4 fade-in t-4 text-center">Contactez-nous</h2>
+			<p class="text-lg text-gray-400 mb-4 fade-in text-center" style="animation-delay: 0.1s;">
+				Vous avez un projet en tête ? Nous serions ravis d'en discuter avec vous.
+			</p>
+			<p class="text-lg text-gray-400 mb-4 fade-intyle="animation-delay: 0.2s;">
+				Décrivez-nous vos besoins et nous vous proposerons une solution adaptée.
+			</p>
+			<!-- Bouton pour envoyer un mail -->
+			<a href="mailto:contact@upixto.fr?subject=Prise de contact" class="bg-white text-black font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-gray-200 transition durfade-in" style="animation-delay: 0.3s;">
+				Envoyer un mail
+			</a>
+		</div>
+	</div>
 
-  <!-- Section 3 : Contact + Footer -->
-  <section class="h-screen flex flex-col justify-center items-center bg-black text-white px-6">
-    <h2 class="text-4xl font-semibold mb-8 fade-in">Contact</h2>
-    <form action="https://formspree.io/f/YOUR_ID" method="POST" class="w-full max-w-md space-y-6 fade-in" style="animation-delay: 0.3s;">
-      <input type="text" name="name" placeholder="Nom" required class="w-full bg-black border-b border-gray-500 text-white py-3 px-2 focus:outline-none focus:border-white">
-      <input type="email" name="email" placeholder="Email" required class="w-full bg-black border-b border-gray-500 text-white py-3 px-2 focus:outline-none focus:border-white">
-      <textarea name="message" rows="4" placeholder="Message" required class="w-full bg-black border-b border-gray-500 text-white py-3 px-2 focus:outline-none focus:border-white"></textarea>
-      <button type="submit" class="w-full py-3 border border-white text-white hover:bg-white hover:text-black transition">Envoyer</button>
-    </form>
-
-    <!-- Footer intégré -->
-    <div class="mt-12 text-center text-sm text-gray-400">
+	<!-- Footer intégré -->
+    <div class="mb-12 text-center text-sm text-gray-400">
       <div class="flex justify-center space-x-6 mb-4">
         <a href="https://www.github.com/upixto" target="_blank" aria-label="GitHub">
           <img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" class="h-5 w-5">
@@ -129,44 +142,5 @@
       © 2025 Upixto. Tous droits réservés.
     </div>
   </section>
-
-  <!-- AOS animation lib -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ once: true, duration: 700 });
-  </script>
-
-  <!-- Loader JS -->
-  <script>
-    window.addEventListener('load', () => {
-      document.getElementById('loader').classList.add('hide');
-    });
-
-    const dots = document.querySelectorAll('.side-menu .dot');
-    const sections = document.querySelectorAll('section');
-
-    // Met à jour l'état actif des points
-    const updateActiveDot = () => {
-      let index = sections.length;
-
-      while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
-
-      dots.forEach(dot => dot.classList.remove('active'));
-      dots[index].classList.add('active');
-    };
-
-    // Ajoute un événement de clic pour chaque point
-    dots.forEach((dot, i) => {
-      dot.addEventListener('click', () => {
-        sections[i].scrollIntoView({ behavior: 'smooth' });
-      });
-    });
-
-    // Met à jour les points lors du défilement
-    window.addEventListener('scroll', updateActiveDot);
-
-    // Initialisation
-    updateActiveDot();
-  </script>
 </body>
 </html>
