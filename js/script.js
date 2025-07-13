@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Fonction pour détecter quelle section est visible
   function updateActiveSection() {
-    const scrollPosition = window.scrollY + window.innerHeight / 2;
+    const scrollPosition = window.scrollY + window.innerHeight / 3; // Ajusté pour mobile
     
     sections.forEach((section, index) => {
       const sectionTop = section.offsetTop;
@@ -26,15 +26,30 @@ document.addEventListener('DOMContentLoaded', function() {
   function scrollToSection(sectionNumber) {
     const targetSection = sections[sectionNumber - 1];
     if (targetSection) {
+      // Détecter si on est sur mobile
+      const isMobile = window.innerWidth <= 768;
+      
       targetSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
+        behavior: isMobile ? 'smooth' : 'smooth',
+        block: isMobile ? 'start' : 'start'
       });
     }
   }
   
   // Écouter le scroll pour mettre à jour la section active
-  window.addEventListener('scroll', updateActiveSection);
+  // Utiliser throttle pour améliorer les performances sur mobile
+  let ticking = false;
+  function requestTick() {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        updateActiveSection();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+  
+  window.addEventListener('scroll', requestTick, { passive: true });
   
   // Ajouter les événements de clic sur les points
   dots.forEach((dot, index) => {

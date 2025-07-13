@@ -2,6 +2,17 @@ html {
   scroll-snap-type: y mandatory;
 }
 
+/* Désactiver scroll-snap sur mobile pour une meilleure UX */
+@media (max-width: 768px) {
+  html {
+    scroll-snap-type: none;
+  }
+  
+  section {
+    scroll-snap-align: none;
+  }
+}
+
 body {
   scroll-behavior: smooth;
   overflow-y: scroll;
