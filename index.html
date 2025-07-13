@@ -24,10 +24,35 @@
     <p class="text-xl md:text-2xl text-gray-700 max-w-2xl fade-in" style="animation-delay: 0.3s;">
       Des solutions digitales sur mesure pour accompagner votre activité au quotidien.
     </p>
+    
+    <!-- Bouton de contact pour mobile -->
+    <div class="mt-16 md:hidden">
+      <a href="mailto:contact@upixto.fr?subject=Prise de contact" class="bg-black text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-800 transition duration-300 fade-in" style="animation-delay: 0.5s;">
+        Contactez-nous
+      </a>
+    </div>
+    
+    <!-- Footer pour mobile -->
+    <div class="absolute bottom-8 left-0 right-0 text-center text-sm text-gray-500 md:hidden">
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="https://www.github.com/upixto" target="_blank" aria-label="GitHub">
+          <img src="https://cdn.simpleicons.org/github/6b7280" alt="GitHub" class="h-5 w-5">
+        </a>
+      </div>
+      <div class="flex items-center justify-center space-x-2 mb-2">
+        <span>contact@upixto.fr</span>
+        <button onclick="copyEmail()" class="text-gray-400 hover:text-gray-600 transition-colors" title="Copier l'email">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg>
+        </button>
+      </div>
+      © 2025 Upixto. Tous droits réservés.
+    </div>
   </section>
 
   <!-- Section 2 : Notre approche -->
-  <section class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-purple-50 to-pink-50 text-center px-4 md:px-6 py-12 md:py-0">
+  <section class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-purple-50 to-pink-50 text-center px-4 md:px-6 py-12 md:py-0 hidden md:flex">
     <h2 class="text-3xl md:text-4xl font-semibold mb-4 fade-in">Notre approche</h2>
     <p class="text-base md:text-lg text-gray-600 mb-8 md:mb-12 fade-in" style="animation-delay: 0.1s;">
       Une méthodologie éprouvée pour transformer vos idées en solutions digitales performantes
@@ -161,7 +186,7 @@
   </section>
 
   <!-- Section 3 : Contact + Footer -->
-  <section class="h-screen flex flex-col justify-center items-center bg-black text-white px-6">
+  <section class="h-screen flex flex-col justify-center items-center bg-black text-white px-6 hidden md:flex">
     <div class="mt-12 flex flex-col items-center justify-center w-full max-w-6xl h-full">
       <div class="w-full md:w-auto flex flex-col items-center">
         <h2 class="text-4xl font-semibold mb-4 fade-in text-center">Contactez-nous</h2>
@@ -184,6 +209,14 @@
         <a href="https://www.github.com/upixto" target="_blank" aria-label="GitHub">
           <img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" class="h-5 w-5">
         </a>
+      </div>
+      <div class="flex items-center justify-center space-x-2 mb-2">
+        <span>contact@upixto.fr</span>
+        <button onclick="copyEmail()" class="text-gray-500 hover:text-gray-300 transition-colors" title="Copier l'email">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg>
+        </button>
       </div>
       © 2025 Upixto. Tous droits réservés.
     </div>

@@ -5,7 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Fonction pour détecter quelle section est visible
   function updateActiveSection() {
-    const scrollPosition = window.scrollY + window.innerHeight / 3; // Ajusté pour mobile
+    // Désactiver sur mobile
+    if (window.innerWidth <= 768) return;
+    
+    const scrollPosition = window.scrollY + window.innerHeight / 2;
     
     sections.forEach((section, index) => {
       const sectionTop = section.offsetTop;
@@ -24,22 +27,24 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Fonction pour naviguer vers une section
   function scrollToSection(sectionNumber) {
+    // Désactiver sur mobile
+    if (window.innerWidth <= 768) return;
+    
     const targetSection = sections[sectionNumber - 1];
     if (targetSection) {
-      // Détecter si on est sur mobile
-      const isMobile = window.innerWidth <= 768;
-      
       targetSection.scrollIntoView({ 
-        behavior: isMobile ? 'smooth' : 'smooth',
-        block: isMobile ? 'start' : 'start'
+        behavior: 'smooth',
+        block: 'start'
       });
     }
   }
   
   // Écouter le scroll pour mettre à jour la section active
-  // Utiliser throttle pour améliorer les performances sur mobile
   let ticking = false;
   function requestTick() {
+    // Désactiver sur mobile
+    if (window.innerWidth <= 768) return;
+    
     if (!ticking) {
       requestAnimationFrame(() => {
         updateActiveSection();
@@ -60,4 +65,55 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Initialiser la section active au chargement
   updateActiveSection();
-}); 
+});
+
+// Fonction pour copier l'email dans le presse-papiers
+function copyEmail() {
+  const email = 'contact@upixto.fr';
+  
+  // Utiliser l'API Clipboard moderne si disponible
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(email).then(() => {
+      showCopyFeedback();
+    }).catch(() => {
+      fallbackCopyEmail(email);
+    });
+  } else {
+    fallbackCopyEmail(email);
+  }
+}
+
+// Méthode de fallback pour copier l'email
+function fallbackCopyEmail(email) {
+  const textArea = document.createElement('textarea');
+  textArea.value = email;
+  textArea.style.position = 'fixed';
+  textArea.style.left = '-999999px';
+  textArea.style.top = '-999999px';
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+  
+  try {
+    document.execCommand('copy');
+    showCopyFeedback();
+  } catch (err) {
+    console.error('Erreur lors de la copie:', err);
+  }
+  
+  document.body.removeChild(textArea);
+}
+
+// Afficher un feedback visuel de la copie
+function showCopyFeedback() {
+  // Créer un toast temporaire
+  const toast = document.createElement('div');
+  toast.textContent = 'Email copié !';
+  toast.className = 'fixed top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 text-sm';
+  document.body.appendChild(toast);
+  
+  // Supprimer le toast après 2 secondes
+  setTimeout(() => {
+    document.body.removeChild(toast);
+  }, 2000);
+} 
