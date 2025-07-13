@@ -1,18 +1,195 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UPIXTO</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upixto</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="img/favicon.png">
 </head>
-<body class="flex items-center justify-center h-screen bg-gray-100">
-  <div class="text-center">
-    <h1 class="text-4xl font-bold text-gray-800">Coming Soon</h1>
-    <p class="text-gray-600 mt-4">We are working on something amazing. Stay tuned!</p>
+<body class="bg-white text-black font-sans tracking-tight">
+
+  <!-- Menu latéral : affichage desktop uniquement -->
+  <div class="side-menu hidden lg:flex">
+    <div class="dot" data-section="1"></div>
+    <div class="dot" data-section="2"></div>
+    <div class="dot" data-section="3"></div>
   </div>
-  <footer class="absolute bottom-0 right-0 p-4">
-	Created by <a href="https://tom-roth.fr/" class="text-blue-500">Tom Roth</a>
-  </footer>
+
+  <!-- Section 1 : Intro -->
+  <section class="h-screen flex flex-col justify-center items-center text-center px-6">
+    <h1 class="text-6xl md:text-7xl font-extrabold mb-4 fade-in">Upixto</h1>
+    <p class="text-xl md:text-2xl text-gray-700 max-w-2xl fade-in" style="animation-delay: 0.3s;">
+      Des solutions digitales sur mesure pour accompagner votre activité au quotidien.
+    </p>
+  </section>
+
+  <!-- Section 2 : Notre approche -->
+  <section class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-purple-50 to-pink-50 text-center px-4 md:px-6 py-12 md:py-0">
+    <h2 class="text-3xl md:text-4xl font-semibold mb-4 fade-in">Notre approche</h2>
+    <p class="text-base md:text-lg text-gray-600 mb-8 md:mb-12 fade-in" style="animation-delay: 0.1s;">
+      Une méthodologie éprouvée pour transformer vos idées en solutions digitales performantes
+    </p>
+    
+    <div class="max-w-6xl w-full">
+      <!-- Timeline mobile-friendly avec alternance desktop -->
+      <div class="relative space-y-6 lg:space-y-0">
+        
+        <!-- Ligne de connexion desktop -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-purple-300 via-pink-300 to-orange-300 h-full hidden lg:block"></div>
+        
+        <!-- Étape 1 -->
+        <div class="fade-in">
+          <div class="flex flex-col lg:flex-row items-center">
+            <!-- Version mobile/tablette -->
+            <div class="lg:hidden flex flex-col items-center">
+              <div class="bg-white rounded-lg p-4 shadow-lg border-l-4 border-purple-500 w-full">
+                <h3 class="text-lg font-semibold mb-2 text-purple-600 text-center">Analyse & Conception</h3>
+                <p class="text-sm text-gray-600 text-center">Nous analysons vos besoins, définissons les objectifs et concevons l'architecture de votre solution</p>
+              </div>
+            </div>
+            
+            <!-- Version desktop - Gauche -->
+            <div class="hidden lg:flex lg:w-1/2 lg:pr-8 text-right">
+              <div class="bg-white rounded-lg p-6 shadow-lg border-l-4 border-purple-500 w-full">
+                <h3 class="text-xl font-semibold mb-2 text-purple-600">Analyse & Conception</h3>
+                <p class="text-base text-gray-600">Nous analysons vos besoins, définissons les objectifs et concevons l'architecture de votre solution</p>
+              </div>
+            </div>
+            
+            <!-- Cercle desktop -->
+            <div class="hidden lg:flex w-12 h-12 bg-purple-500 rounded-full items-center justify-center text-white font-bold text-lg z-10 relative shadow-lg">
+              1
+            </div>
+            
+            <!-- Espace vide desktop -->
+            <div class="hidden lg:block lg:w-1/2 lg:pl-8"></div>
+          </div>
+        </div>
+
+        <!-- Étape 2 -->
+        <div class="fade-in" style="animation-delay: 0.2s;">
+          <div class="flex flex-col lg:flex-row items-center">
+            <!-- Version mobile/tablette -->
+            <div class="lg:hidden flex flex-col items-center">
+              <div class="bg-white rounded-lg p-4 shadow-lg border-l-4 border-pink-500 w-full">
+                <h3 class="text-lg font-semibold mb-2 text-pink-600 text-center">Développement</h3>
+                <p class="text-sm text-gray-600 text-center">Nous développons votre solution en utilisant les technologies les plus adaptées à vos besoins</p>
+              </div>
+            </div>
+            
+            <!-- Espace vide desktop -->
+            <div class="hidden lg:block lg:w-1/2 lg:pr-8"></div>
+            
+            <!-- Cercle desktop -->
+            <div class="hidden lg:flex w-12 h-12 bg-pink-500 rounded-full items-center justify-center text-white font-bold text-lg z-10 relative shadow-lg">
+              2
+            </div>
+            
+            <!-- Version desktop - Droite -->
+            <div class="hidden lg:flex lg:w-1/2 lg:pl-8">
+              <div class="bg-white rounded-lg p-6 shadow-lg border-l-4 border-pink-500 w-full">
+                <h3 class="text-xl font-semibold mb-2 text-pink-600">Développement</h3>
+                <p class="text-base text-gray-600">Nous développons votre solution en utilisant les technologies les plus adaptées à vos besoins</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Étape 3 -->
+        <div class="fade-in" style="animation-delay: 0.4s;">
+          <div class="flex flex-col lg:flex-row items-center">
+            <!-- Version mobile/tablette -->
+            <div class="lg:hidden flex flex-col items-center">
+              <div class="bg-white rounded-lg p-4 shadow-lg border-l-4 border-orange-500 w-full">
+                <h3 class="text-lg font-semibold mb-2 text-orange-600 text-center">Tests & Optimisation</h3>
+                <p class="text-sm text-gray-600 text-center">Nous testons rigoureusement chaque fonctionnalité et optimisons les performances</p>
+              </div>
+            </div>
+            
+            <!-- Version desktop - Gauche -->
+            <div class="hidden lg:flex lg:w-1/2 lg:pr-8 text-right">
+              <div class="bg-white rounded-lg p-6 shadow-lg border-l-4 border-orange-500 w-full">
+                <h3 class="text-xl font-semibold mb-2 text-orange-600">Tests & Optimisation</h3>
+                <p class="text-base text-gray-600">Nous testons rigoureusement chaque fonctionnalité et optimisons les performances</p>
+              </div>
+            </div>
+            
+            <!-- Cercle desktop -->
+            <div class="hidden lg:flex w-12 h-12 bg-orange-500 rounded-full items-center justify-center text-white font-bold text-lg z-10 relative shadow-lg">
+              3
+            </div>
+            
+            <!-- Espace vide desktop -->
+            <div class="hidden lg:block lg:w-1/2 lg:pl-8"></div>
+          </div>
+        </div>
+
+        <!-- Étape 4 -->
+        <div class="fade-in" style="animation-delay: 0.6s;">
+          <div class="flex flex-col lg:flex-row items-center">
+            <!-- Version mobile/tablette -->
+            <div class="lg:hidden flex flex-col items-center">
+              <div class="bg-white rounded-lg p-4 shadow-lg border-l-4 border-red-500 w-full">
+                <h3 class="text-lg font-semibold mb-2 text-red-600 text-center">Déploiement & Suivi</h3>
+                <p class="text-sm text-gray-600 text-center">Nous déployons votre solution et assurons un suivi continu pour garantir son bon fonctionnement</p>
+              </div>
+            </div>
+            
+            <!-- Espace vide desktop -->
+            <div class="hidden lg:block lg:w-1/2 lg:pr-8"></div>
+            
+            <!-- Cercle desktop -->
+            <div class="hidden lg:flex w-12 h-12 bg-red-500 rounded-full items-center justify-center text-white font-bold text-lg z-10 relative shadow-lg">
+              4
+            </div>
+            
+            <!-- Version desktop - Droite -->
+            <div class="hidden lg:flex lg:w-1/2 lg:pl-8">
+              <div class="bg-white rounded-lg p-6 shadow-lg border-l-4 border-red-500 w-full">
+                <h3 class="text-xl font-semibold mb-2 text-red-600">Déploiement & Suivi</h3>
+                <p class="text-base text-gray-600">Nous déployons votre solution et assurons un suivi continu pour garantir son bon fonctionnement</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3 : Contact + Footer -->
+  <section class="h-screen flex flex-col justify-center items-center bg-black text-white px-6">
+    <div class="mt-12 flex flex-col items-center justify-center w-full max-w-6xl h-full">
+      <div class="w-full md:w-auto flex flex-col items-center">
+        <h2 class="text-4xl font-semibold mb-4 fade-in text-center">Contactez-nous</h2>
+        <p class="text-lg text-gray-400 mb-4 fade-in text-center" style="animation-delay: 0.1s;">
+          Vous avez un projet en tête ? Nous serions ravis d'en discuter avec vous.
+        </p>
+        <p class="text-lg text-gray-400 mb-4 text-center fade-in" style="animation-delay: 0.2s;">
+          Décrivez-nous vos besoins et nous vous proposerons une solution adaptée.
+        </p>
+        <!-- Bouton pour envoyer un mail -->
+        <a href="mailto:contact@upixto.fr?subject=Prise de contact" class="bg-white text-black font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-gray-200 transition duration-300 fade-in" style="animation-delay: 0.3s;">
+          Envoyer un mail
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer intégré -->
+    <div class="mb-12 text-center text-sm text-gray-400">
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="https://www.github.com/upixto" target="_blank" aria-label="GitHub">
+          <img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" class="h-5 w-5">
+        </a>
+      </div>
+      © 2025 Upixto. Tous droits réservés.
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+
 </body>
 </html>
