@@ -116,4 +116,18 @@ function showCopyFeedback() {
   setTimeout(() => {
     document.body.removeChild(toast);
   }, 2000);
-} 
+}
+
+// Définir l'année dynamique dans le footer
+function setDynamicYear() {
+  const yearElements = document.querySelectorAll('#year');
+  const currentYear = new Date().getFullYear();
+  yearElements.forEach(element => {
+    element.textContent = currentYear;
+  });
+}
+
+// Initialiser l'année au chargement du DOM
+document.addEventListener('DOMContentLoaded', () => {
+  setDynamicYear();
+}); 
