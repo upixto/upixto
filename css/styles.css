@@ -14,6 +14,7 @@ html {
 }
 
 body {
+  font-family: 'Raleway', sans-serif;
   scroll-behavior: smooth;
   overflow-y: scroll;
   height: 100vh;
@@ -21,6 +22,24 @@ body {
 
 section {
   scroll-snap-align: start;
+}
+
+section:first-of-type {
+  background-color: #e9e5db;
+}
+
+section:nth-of-type(2) {
+  background: linear-gradient(155deg, #dcd7ce 0%, #d4cfc6 100%);
+}
+
+section:nth-of-type(3) {
+  background-color: #18140e;
+  color: #ede8df;
+}
+
+h1, h2 {
+  font-family: 'Yellowtail', cursive;
+  letter-spacing: 0;
 }
 
 .fade-in {
@@ -69,15 +88,17 @@ section {
 }
 
 .side-menu .dot {
-  width: 12px;
-  height: 12px;
-  background-color: #ccc;
+  width: 10px;
+  height: 10px;
+  background-color: #7c6f5e;
   border-radius: 50%;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4), 0 0 0 3px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .side-menu .dot.active {
-  background-color: #000;
-  transform: scale(1.5);
+  background-color: #3d2e22;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6), 0 0 0 3px rgba(0, 0, 0, 0.2);
+  transform: scale(1.4);
 } 
