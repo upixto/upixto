@@ -20,7 +20,64 @@
   </div>
 
   <!-- Section 1 : Intro -->
-  <section class="h-screen flex flex-col justify-center items-center text-center px-6">
+  <section class="h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
+
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+
+      <!-- </> -->
+      <svg class="deco-element" style="position:absolute;top:14%;left:6%;--delay:0.4s" width="56" height="32" viewBox="0 0 56 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 16 4 L 4 16 L 16 28" stroke="#6b5d52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M 24 28 L 32 4" stroke="#6b5d52" stroke-width="2" stroke-linecap="round"/>
+        <path d="M 40 4 L 52 16 L 40 28" stroke="#6b5d52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+
+      <!-- Nœud circuit -->
+      <svg class="deco-element" style="position:absolute;top:10%;right:8%;--delay:0.9s" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="25" cy="25" r="6" stroke="#6b5d52" stroke-width="1.5"/>
+        <line x1="25" y1="19" x2="25" y2="6" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="25" y1="31" x2="25" y2="44" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="19" y1="25" x2="6" y2="25" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="31" y1="25" x2="44" y2="25" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="25" cy="6" r="3" stroke="#6b5d52" stroke-width="1.5"/>
+        <circle cx="25" cy="44" r="3" stroke="#6b5d52" stroke-width="1.5"/>
+        <circle cx="6" cy="25" r="3" stroke="#6b5d52" stroke-width="1.5"/>
+        <circle cx="44" cy="25" r="3" stroke="#6b5d52" stroke-width="1.5"/>
+      </svg>
+
+      <!-- Signal wifi (desktop uniquement) -->
+      <svg class="deco-element hidden md:block" style="position:absolute;top:44%;right:5%;--delay:1.5s" width="44" height="36" viewBox="0 0 44 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 2 22 C 2 10, 10 2, 22 2 C 34 2, 42 10, 42 22" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M 8 22 C 8 13, 14 7, 22 7 C 30 7, 36 13, 36 22" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M 14 22 C 14 16, 18 12, 22 12 C 26 12, 30 16, 30 22" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="22" cy="32" r="3" stroke="#6b5d52" stroke-width="1.5"/>
+      </svg>
+
+      <!-- Curseur souris -->
+      <svg class="deco-element" style="position:absolute;bottom:22%;right:9%;--delay:2.0s" width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 4 4 L 4 26 L 10 20 L 14 28 L 18 26 L 14 18 L 22 18 Z" stroke="#6b5d52" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+      </svg>
+
+      <!-- { } -->
+      <svg class="deco-element" style="position:absolute;bottom:16%;left:7%;--delay:2.6s" width="44" height="40" viewBox="0 0 44 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 16 4 C 10 4, 8 8, 8 13 C 8 17, 5 19, 5 20 C 5 21, 8 23, 8 27 C 8 32, 10 36, 16 36" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M 28 4 C 34 4, 36 8, 36 13 C 36 17, 39 19, 39 20 C 39 21, 36 23, 36 27 C 36 32, 34 36, 28 36" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+
+      <!-- Grille pixel (desktop uniquement) -->
+      <svg class="deco-element hidden md:block" style="position:absolute;top:54%;left:4%;--delay:3.1s" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="7" height="7" stroke="#6b5d52" stroke-width="1.2"/>
+        <rect x="11" y="1" width="7" height="7" stroke="#6b5d52" stroke-width="1.2"/>
+        <rect x="21" y="1" width="7" height="7" stroke="#6b5d52" stroke-width="1.2"/>
+        <rect x="1" y="11" width="7" height="7" stroke="#6b5d52" stroke-width="1.2"/>
+        <rect x="11" y="11" width="7" height="7" stroke="#6b5d52" stroke-width="1.2"/>
+        <rect x="21" y="11" width="7" height="7" stroke="#6b5d52" stroke-width="1.2"/>
+        <rect x="1" y="21" width="7" height="7" stroke="#6b5d52" stroke-width="1.2"/>
+        <rect x="11" y="21" width="7" height="7" stroke="#6b5d52" stroke-width="1.2"/>
+        <rect x="21" y="21" width="7" height="7" stroke="#6b5d52" stroke-width="1.2"/>
+      </svg>
+
+    </div>
+
     <h1 class="text-6xl md:text-7xl font-extrabold mb-4 fade-in">Upixto</h1>
     <p class="text-xl md:text-2xl text-gray-700 max-w-2xl fade-in" style="animation-delay: 0.3s;">
       Des solutions digitales sur mesure pour accompagner votre activité au quotidien.
