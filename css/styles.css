@@ -29,10 +29,14 @@ section:first-of-type {
 }
 
 section:nth-of-type(2) {
-  background: linear-gradient(155deg, #dcd7ce 0%, #d4cfc6 100%);
+  background-color: #dbd5cb;
 }
 
 section:nth-of-type(3) {
+  background-color: #cfc8bc;
+}
+
+section:nth-of-type(4) {
   background-color: #18140e;
   color: #ede8df;
 }

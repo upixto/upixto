@@ -17,6 +17,7 @@
     <div class="dot" data-section="1"></div>
     <div class="dot" data-section="2"></div>
     <div class="dot" data-section="3"></div>
+    <div class="dot" data-section="4"></div>
   </div>
 
   <!-- Section 1 : Intro -->
@@ -198,8 +199,100 @@
     </div>
   </section>
 
-  <!-- Section 3 : Contact + Footer -->
-  <section class="h-screen flex flex-col justify-center items-center px-6 hidden md:flex">
+  <!-- Section 3 : Réalisations -->
+  <section class="h-screen flex flex-col justify-center items-center text-center px-4 md:px-6 hidden md:flex">
+    <h2 class="text-3xl md:text-4xl font-semibold mb-4 fade-in">Réalisations</h2>
+    <p class="text-base md:text-lg text-gray-600 mb-8 fade-in" style="animation-delay: 0.1s;">
+      Indépendants, artisans, cabinets — un aperçu des projets réalisés et des missions en cours
+    </p>
+
+    <div class="max-w-5xl w-full grid grid-cols-2 gap-5">
+
+      <!-- Odéas Courtage & Circa-Rep -->
+      <div class="fade-in bg-white/50 rounded-xl p-6 border border-stone-200 shadow-sm text-left flex flex-col">
+        <div class="mb-3">
+          <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="10" width="22" height="15" rx="2" stroke="#6b5d52" stroke-width="1.5"/>
+            <path d="M 9 10 L 9 7 C 9 5.5, 10.5 4, 14 4 C 17.5 4, 19 5.5, 19 7 L 19 10" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="3" y1="17" x2="25" y2="17" stroke="#6b5d52" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="text-base font-semibold mb-0.5 text-stone-700">Odéas Courtage & Circa-Rep</h3>
+        <p class="text-xs text-stone-400 mb-3">Cabinets de courtage · Colmar & Cayenne</p>
+        <p class="text-sm text-gray-600 mb-4 flex-1">Déploiement d'un écosystème digital complet : hébergement cloud, site vitrine, messagerie professionnelle et CRM développé sur mesure selon les besoins métier.</p>
+        <div class="flex gap-2 flex-wrap">
+          <span class="text-xs bg-stone-100 text-stone-600 px-2 py-1 rounded-full">Nextcloud</span>
+          <span class="text-xs bg-stone-100 text-stone-600 px-2 py-1 rounded-full">WordPress</span>
+          <span class="text-xs bg-stone-100 text-stone-600 px-2 py-1 rounded-full">Exchange</span>
+          <span class="text-xs bg-stone-100 text-stone-600 px-2 py-1 rounded-full">CRM sur mesure</span>
+        </div>
+      </div>
+
+      <!-- Facturation Électronique -->
+      <div class="fade-in bg-white/50 rounded-xl p-6 border border-stone-200 shadow-sm text-left flex flex-col" style="animation-delay: 0.15s;">
+        <div class="mb-3">
+          <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 6 4 L 6 24 L 22 24 L 22 10 L 16 4 Z" stroke="#6b5d52" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M 16 4 L 16 10 L 22 10" stroke="#6b5d52" stroke-width="1.5" stroke-linejoin="round"/>
+            <line x1="9" y1="15" x2="19" y2="15" stroke="#6b5d52" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="9" y1="19" x2="16" y2="19" stroke="#6b5d52" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="text-base font-semibold mb-0.5 text-stone-700">Facturation Électronique</h3>
+        <div class="flex items-center gap-2 mb-3">
+          <p class="text-xs text-stone-400">Mise en conformité</p>
+        </div>
+        <p class="text-sm text-gray-600 mb-3 flex-1">Accompagnement dans le choix d'une plateforme agréée (PA) adaptée à votre activité, et dans son intégration à votre workflow de facturation existant.</p>
+        <div class="flex gap-2 flex-wrap">
+          <span class="text-xs bg-stone-100 text-stone-600 px-2 py-1 rounded-full">Conseil</span>
+          <span class="text-xs bg-stone-100 text-stone-600 px-2 py-1 rounded-full">Veille technologique</span>
+        </div>
+      </div>
+
+      <!-- Chez Georgette -->
+      <div class="fade-in bg-white/50 rounded-xl p-6 border border-stone-200 shadow-sm text-left flex flex-col" style="animation-delay: 0.3s;">
+        <div class="mb-3">
+          <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="6" cy="8" r="3" stroke="#6b5d52" stroke-width="1.5"/>
+            <circle cx="6" cy="20" r="3" stroke="#6b5d52" stroke-width="1.5"/>
+            <circle cx="22" cy="14" r="3" stroke="#6b5d52" stroke-width="1.5"/>
+            <path d="M 9 8 L 17 12" stroke="#6b5d52" stroke-width="1.2" stroke-linecap="round"/>
+            <path d="M 9 20 L 17 16" stroke="#6b5d52" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="text-base font-semibold mb-0.5 text-stone-700">Chez Georgette</h3>
+        <p class="text-xs text-stone-400 mb-3">Salon de thé · Vesoul</p>
+        <p class="text-sm text-gray-600 mb-4 flex-1">Mise en place d'un workflow de centralisation des factures d'achats (scan, mails, portails fournisseurs). Configuration de l'hébergement et du nom de domaine pour un site vitrine.</p>
+        <div class="flex gap-2 flex-wrap">
+          <span class="text-xs bg-stone-100 text-stone-600 px-2 py-1 rounded-full">Automatisation</span>
+          <span class="text-xs bg-stone-100 text-stone-600 px-2 py-1 rounded-full">Dématérialisation</span>
+          <span class="text-xs bg-stone-100 text-stone-600 px-2 py-1 rounded-full">Hébergement</span>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="fade-in bg-stone-800 rounded-xl p-6 border border-stone-700 shadow-sm text-left flex flex-col justify-between" style="animation-delay: 0.45s;">
+        <div>
+          <div class="mb-3">
+            <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="14" cy="14" r="11" stroke="#a89880" stroke-width="1.5"/>
+              <line x1="14" y1="9" x2="14" y2="19" stroke="#a89880" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="9" y1="14" x2="19" y2="14" stroke="#a89880" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="text-base font-semibold mb-2 text-stone-200">Vous êtes le prochain ?</h3>
+          <p class="text-sm text-stone-400 mb-6">Un projet en tête ? Décrivez-moi votre besoin et je vous proposerai une solution adaptée à votre budget.</p>
+        </div>
+        <button onclick="scrollToSection(4)" class="bg-stone-100 text-stone-800 text-sm font-medium py-2 px-6 rounded-full hover:bg-white transition duration-300 cursor-pointer">
+          Me contacter
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 4 : Contact + Footer -->
+  <section id="contact" class="h-screen flex flex-col justify-center items-center px-6 hidden md:flex">
     <div class="mt-12 flex flex-col items-center justify-center w-full max-w-6xl h-full">
       <div class="w-full md:w-auto flex flex-col items-center">
         <h2 class="text-4xl font-semibold mb-4 fade-in text-center">Contactez-moi</h2>
