@@ -9,6 +9,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Yellowtail&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="img/favicon.png">
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.io/js/pa-fPLh_GIMIKndcr5wafdI-.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
 </head>
 <body class="bg-white text-black tracking-tight">
 
@@ -101,7 +107,7 @@
       <div class="flex items-center justify-center space-x-2 mb-2">
         <span>contact@upixto.fr</span>
       </div>
-      © <span id="year"></span> Upixto. Tous droits réservés.
+      © <span id="year"></span> Upixto. Tous droits réservés. · <a href="#" class="open-legal-modal hover:text-gray-700 transition">Mentions légales</a>
     </div>
   </section>
 
@@ -218,7 +224,7 @@
           </svg>
         </div>
         <h3 class="text-base font-semibold mb-0.5 text-stone-700">Odéas Courtage & Circa-Rep</h3>
-        <p class="text-xs text-stone-400 mb-3">Cabinets de courtage · Colmar & Cayenne</p>
+        <p class="text-xs text-stone-400 mb-3">Cabinets de courtage · Colmar (68) & Cayenne (973)</p>
         <p class="text-sm text-gray-600 mb-4 flex-1">Déploiement d'un écosystème digital complet : hébergement cloud, site vitrine, messagerie professionnelle et CRM développé sur mesure selon les besoins métier.</p>
         <div class="flex gap-2 flex-wrap">
           <span class="text-xs bg-stone-100 text-stone-600 px-2 py-1 rounded-full">Nextcloud</span>
@@ -261,8 +267,8 @@
           </svg>
         </div>
         <h3 class="text-base font-semibold mb-0.5 text-stone-700">Chez Georgette</h3>
-        <p class="text-xs text-stone-400 mb-3">Salon de thé · Vesoul</p>
-        <p class="text-sm text-gray-600 mb-4 flex-1">Mise en place d'un workflow de centralisation des factures d'achats (scan, mails, portails fournisseurs). Configuration de l'hébergement et du nom de domaine pour un site vitrine.</p>
+        <p class="text-xs text-stone-400 mb-3">Salon de thé · Vesoul (70)</p>
+        <p class="text-sm text-gray-600 mb-4 flex-1">Mise en place d'un workflow de centralisation des factures d'achats (scan et mails). Configuration de l'hébergement et du nom de domaine pour un site vitrine.</p>
         <div class="flex gap-2 flex-wrap">
           <span class="text-xs bg-stone-100 text-stone-600 px-2 py-1 rounded-full">Automatisation</span>
           <span class="text-xs bg-stone-100 text-stone-600 px-2 py-1 rounded-full">Dématérialisation</span>
@@ -319,11 +325,65 @@
       <div class="flex items-center justify-center space-x-2 mb-2">
         <span>contact@upixto.fr</span>
       </div>
-      © <span id="year"></span> Upixto. Tous droits réservés.<br/>
+      © <span id="year"></span> Upixto. Tous droits réservés. · <a href="#" class="open-legal-modal hover:text-stone-300 transition">Mentions légales</a>
     </div>
   </section>
 
+  <!-- Modale mentions légales -->
+  <div id="legal-modal" class="fixed inset-0 z-[200] flex items-center justify-center p-6 hidden" role="dialog" aria-modal="true" aria-labelledby="legal-modal-title">
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" id="legal-modal-backdrop"></div>
+    <div class="relative bg-[#f5f2ed] rounded-2xl shadow-xl max-w-lg w-full max-h-[80vh] overflow-y-auto p-8 z-10">
+      <button id="legal-modal-close" class="absolute top-4 right-4 text-stone-400 hover:text-stone-700 transition" aria-label="Fermer">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="4" y1="4" x2="16" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="16" y1="4" x2="4" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <h2 id="legal-modal-title" class="text-2xl font-semibold mb-6 text-stone-800">Mentions légales</h2>
+      <div class="text-sm text-stone-600 space-y-5 leading-relaxed">
+        <div>
+          <p class="font-semibold text-stone-700 mb-1">Éditeur du site</p>
+          <p>Upixto — EI Tom Roth<br>
+          SIRET : 88473069800039<br>
+          contact@upixto.fr</p>
+        </div>
+        <div>
+          <p class="font-semibold text-stone-700 mb-1">Hébergement</p>
+          <p>GitHub, Inc.<br>
+          88 Colin P. Kelly Jr Street<br>
+          San Francisco, CA 94107<br>
+          États-Unis<br>
+          https://github.com</p>
+        </div>
+        <div>
+          <p class="font-semibold text-stone-700 mb-1">Propriété intellectuelle</p>
+          <p>L'ensemble du contenu de ce site (textes, visuels, code) est la propriété exclusive d'Upixto. Toute reproduction, même partielle, est interdite sans autorisation préalable.</p>
+        </div>
+        <div>
+          <p class="font-semibold text-stone-700 mb-1">Données personnelles & mesure d'audience</p>
+          <p>Ce site utilise <a href="https://plausible.io" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-stone-800 transition">Plausible Analytics</a> pour mesurer son audience de façon anonyme. Aucun cookie n'est déposé sur votre appareil, aucune donnée personnelle n'est collectée, et aucun profil individuel n'est constitué. Les statistiques agrégées produites ne permettent pas de vous identifier. Plausible est conforme au RGPD par conception.</p>
+          <p class="mt-2">Les éventuels échanges par e-mail sont traités de manière confidentielle et ne sont pas transmis à des tiers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="js/script.js"></script>
+  <script>
+    (function () {
+      const modal = document.getElementById('legal-modal');
+      const backdrop = document.getElementById('legal-modal-backdrop');
+      const closeBtn = document.getElementById('legal-modal-close');
+
+      function openModal() { modal.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
+      function closeModal() { modal.classList.add('hidden'); document.body.style.overflow = ''; }
+
+      document.querySelectorAll('.open-legal-modal').forEach(el => el.addEventListener('click', function (e) { e.preventDefault(); openModal(); }));
+      closeBtn.addEventListener('click', closeModal);
+      backdrop.addEventListener('click', closeModal);
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+    })();
+  </script>
 
 </body>
 </html>
