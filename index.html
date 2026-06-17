@@ -91,107 +91,118 @@
       Des solutions digitales pour les indépendants, les PME et les particuliers — sur mesure ou recommandées parmi les meilleurs outils existants, avec des tarifs maîtrisés.
     </p>
     
-    <!-- Bouton de contact pour mobile -->
-    <div class="mt-16 md:hidden">
-      <a href="mailto:contact@upixto.fr?subject=Prise de contact" class="bg-stone-800 text-stone-100 font-medium py-3 px-8 rounded-full shadow-md hover:bg-stone-900 transition duration-300 fade-in" style="animation-delay: 0.5s;">
+    <!-- Bouton de contact -->
+    <div class="mt-16">
+      <a href="#contact" class="bg-stone-800 text-stone-100 font-medium py-3 px-8 rounded-full shadow-md hover:bg-stone-900 transition duration-300 fade-in" style="animation-delay: 0.5s;">
         Contactez-moi
       </a>
     </div>
-    
-    <!-- Footer pour mobile -->
-    <div class="absolute bottom-8 left-0 right-0 text-center text-sm text-gray-500 md:hidden">
-      <div class="flex justify-center space-x-6 mb-4">
-        <a href="https://www.github.com/upixto" target="_blank" aria-label="GitHub">
-          <img src="https://cdn.simpleicons.org/github/6b7280" alt="GitHub" class="h-5 w-5">
-        </a>
-        <a href="https://www.instagram.com/upixto" target="_blank" aria-label="Instagram">
-          <img src="https://cdn.simpleicons.org/instagram/6b7280" alt="Instagram" class="h-5 w-5">
-        </a>
-        <a href="https://share.google/G4T1l7vPePNHjzuJv" target="_blank" aria-label="Google Business">
-          <img src="https://cdn.simpleicons.org/googlemaps/6b7280" alt="Google Business" class="h-5 w-5">
-        </a>
-      </div>
-      <div class="flex items-center justify-center space-x-2 mb-2">
-        <span>contact@upixto.fr</span>
-      </div>
-      © <span id="year"></span> Upixto. Tous droits réservés. · <a href="#" class="open-legal-modal hover:text-gray-700 transition">Mentions légales</a>
-    </div>
+
   </section>
 
   <!-- Section 2 : Mon approche -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 md:px-6 py-12 md:py-0 hidden md:flex">
-    <h2 class="text-3xl md:text-4xl font-semibold mb-4 fade-in">Mon approche</h2>
-    <p class="text-base md:text-lg text-gray-600 mb-10 fade-in" style="animation-delay: 0.1s;">
+  <section class="md:min-h-screen flex flex-col justify-center items-center text-center px-4 md:px-6 py-12 md:py-0">
+    <h2 class="text-3xl md:text-4xl font-semibold mb-3 md:mb-4 fade-in">Mon approche</h2>
+    <p class="text-base md:text-lg text-gray-600 mb-7 md:mb-10 fade-in" style="animation-delay: 0.1s;">
       Selon votre situation, deux approches complémentaires s'offrent à vous
     </p>
 
-    <div class="max-w-5xl w-full">
+    <!-- Vue simplifiée mobile uniquement -->
+    <div class="md:hidden max-w-xl w-full flex flex-col gap-3 fade-in" style="animation-delay: 0.2s;">
+      <div class="bg-white/50 rounded-xl p-4 border border-stone-200 shadow-sm text-left">
+        <p class="text-xs uppercase tracking-widest text-stone-400 mb-2">Développement sur mesure</p>
+        <h3 class="text-sm font-semibold text-stone-700 mb-2">Une solution conçue pour vous</h3>
+        <p class="text-xs text-gray-500 mb-3">J'analyse vos besoins, coordonne les développeurs, valide la solution et vous accompagne dans la prise en main.</p>
+        <ul class="text-xs text-stone-400 space-y-1">
+          <li>· Analyse & Cadrage</li>
+          <li>· Pilotage & Coordination</li>
+          <li>· Recette & Configuration</li>
+          <li>· Prise en main & Support</li>
+        </ul>
+      </div>
+      <div class="bg-white/50 rounded-xl p-4 border border-stone-200 shadow-sm text-left">
+        <p class="text-xs uppercase tracking-widest text-stone-400 mb-2">Solution existante</p>
+        <h3 class="text-sm font-semibold text-stone-700 mb-2">Veille & Recommandation</h3>
+        <p class="text-xs text-gray-500">Parfois la solution idéale existe déjà. Je réalise une veille technologique active pour identifier les outils qui correspondent à vos besoins — et vous accompagne dans leur sélection et leur mise en place, sans développement inutile.</p>
+      </div>
+    </div>
+
+    <!-- Vue détaillée desktop uniquement -->
+    <div class="hidden md:block max-w-5xl w-full">
 
       <p class="text-left text-xs uppercase tracking-widest text-stone-400 mb-3 fade-in">Développement sur mesure</p>
 
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5 mb-5 md:mb-8">
 
-        <div class="fade-in bg-white/50 rounded-xl p-6 border border-stone-200 shadow-sm text-left">
-          <div class="mb-4">
-            <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="11" cy="11" r="7" stroke="#6b5d52" stroke-width="1.5"/>
-              <line x1="16" y1="16" x2="24" y2="24" stroke="#6b5d52" stroke-width="2" stroke-linecap="round"/>
-              <line x1="7" y1="11" x2="15" y2="11" stroke="#6b5d52" stroke-width="1.2" stroke-linecap="round"/>
-              <line x1="11" y1="7" x2="11" y2="15" stroke="#6b5d52" stroke-width="1.2" stroke-linecap="round"/>
-            </svg>
+        <div class="fade-in bg-white/50 rounded-xl p-4 md:p-6 border border-stone-200 shadow-sm text-left">
+          <div class="flex items-center gap-3 mb-2 md:block">
+            <div class="shrink-0 md:mb-4">
+              <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="11" cy="11" r="7" stroke="#6b5d52" stroke-width="1.5"/>
+                <line x1="16" y1="16" x2="24" y2="24" stroke="#6b5d52" stroke-width="2" stroke-linecap="round"/>
+                <line x1="7" y1="11" x2="15" y2="11" stroke="#6b5d52" stroke-width="1.2" stroke-linecap="round"/>
+                <line x1="11" y1="7" x2="11" y2="15" stroke="#6b5d52" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="text-base font-semibold text-stone-700 md:mb-2">Analyse & Cadrage</h3>
           </div>
-          <h3 class="text-base font-semibold mb-2 text-stone-700">Analyse & Cadrage</h3>
           <p class="text-sm text-gray-600">J'analyse vos besoins, recense les cas d'usage et rédige les spécifications de votre solution</p>
         </div>
 
-        <div class="fade-in bg-white/50 rounded-xl p-6 border border-stone-200 shadow-sm text-left" style="animation-delay: 0.2s;">
-          <div class="mb-4">
-            <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="2" y="4" width="24" height="20" rx="2" stroke="#6b5d52" stroke-width="1.5"/>
-              <path d="M 7 11 L 12 14 L 7 17" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <line x1="15" y1="17" x2="22" y2="17" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
+        <div class="fade-in bg-white/50 rounded-xl p-4 md:p-6 border border-stone-200 shadow-sm text-left" style="animation-delay: 0.2s;">
+          <div class="flex items-center gap-3 mb-2 md:block">
+            <div class="shrink-0 md:mb-4">
+              <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="4" width="24" height="20" rx="2" stroke="#6b5d52" stroke-width="1.5"/>
+                <path d="M 7 11 L 12 14 L 7 17" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <line x1="15" y1="17" x2="22" y2="17" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="text-base font-semibold text-stone-700 md:mb-2">Pilotage & Coordination</h3>
           </div>
-          <h3 class="text-base font-semibold mb-2 text-stone-700">Pilotage & Coordination</h3>
           <p class="text-sm text-gray-600">Je coordonne des développeurs sélectionnés selon les contraintes techniques de votre projet</p>
         </div>
 
-        <div class="fade-in bg-white/50 rounded-xl p-6 border border-stone-200 shadow-sm text-left" style="animation-delay: 0.4s;">
-          <div class="mb-4">
-            <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M 14 2 L 25 6 L 25 14 C 25 20, 20 25, 14 27 C 8 25, 3 20, 3 14 L 3 6 Z" stroke="#6b5d52" stroke-width="1.5" stroke-linejoin="round"/>
-              <path d="M 9 14 L 12 17 L 19 10" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+        <div class="fade-in bg-white/50 rounded-xl p-4 md:p-6 border border-stone-200 shadow-sm text-left" style="animation-delay: 0.4s;">
+          <div class="flex items-center gap-3 mb-2 md:block">
+            <div class="shrink-0 md:mb-4">
+              <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 14 2 L 25 6 L 25 14 C 25 20, 20 25, 14 27 C 8 25, 3 20, 3 14 L 3 6 Z" stroke="#6b5d52" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M 9 14 L 12 17 L 19 10" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="text-base font-semibold text-stone-700 md:mb-2">Recette & Configuration</h3>
           </div>
-          <h3 class="text-base font-semibold mb-2 text-stone-700">Recette & Configuration</h3>
           <p class="text-sm text-gray-600">Je réalise les tests utilisateurs sur la solution livrée et configure les environnements pour la mise en production</p>
         </div>
 
-        <div class="fade-in bg-white/50 rounded-xl p-6 border border-stone-200 shadow-sm text-left" style="animation-delay: 0.6s;">
-          <div class="mb-4">
-            <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M 6 14 C 6 8, 9 4, 14 4 C 19 4, 22 8, 22 14" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-              <rect x="3" y="13" width="5" height="7" rx="2" stroke="#6b5d52" stroke-width="1.5"/>
-              <rect x="20" y="13" width="5" height="7" rx="2" stroke="#6b5d52" stroke-width="1.5"/>
-              <path d="M 22 19 C 22 22, 19 24, 14 24" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-            </svg>
+        <div class="fade-in bg-white/50 rounded-xl p-4 md:p-6 border border-stone-200 shadow-sm text-left" style="animation-delay: 0.6s;">
+          <div class="flex items-center gap-3 mb-2 md:block">
+            <div class="shrink-0 md:mb-4">
+              <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 6 14 C 6 8, 9 4, 14 4 C 19 4, 22 8, 22 14" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                <rect x="3" y="13" width="5" height="7" rx="2" stroke="#6b5d52" stroke-width="1.5"/>
+                <rect x="20" y="13" width="5" height="7" rx="2" stroke="#6b5d52" stroke-width="1.5"/>
+                <path d="M 22 19 C 22 22, 19 24, 14 24" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+              </svg>
+            </div>
+            <h3 class="text-base font-semibold text-stone-700 md:mb-2">Prise en main & Support</h3>
           </div>
-          <h3 class="text-base font-semibold mb-2 text-stone-700">Prise en main & Support</h3>
           <p class="text-sm text-gray-600">J'accompagne les utilisateurs dans la prise en main de la solution et assure le support après la mise en production</p>
         </div>
 
       </div>
 
       <!-- Divider -->
-      <div class="flex items-center gap-4 mb-8 fade-in" style="animation-delay: 0.7s;">
+      <div class="flex items-center gap-4 mb-5 md:mb-8 fade-in" style="animation-delay: 0.7s;">
         <div class="flex-1 border-t border-stone-200"></div>
         <span class="text-xs uppercase tracking-widest text-stone-400 px-2">ou</span>
         <div class="flex-1 border-t border-stone-200"></div>
       </div>
 
       <p class="text-left text-xs uppercase tracking-widest text-stone-400 mb-3 fade-in" style="animation-delay: 0.8s;">Solution existante</p>
-      <div class="fade-in bg-white/50 rounded-xl p-6 border border-stone-200 shadow-sm text-left" style="animation-delay: 0.9s;">
-        <div class="flex items-start gap-5">
+      <div class="fade-in bg-white/50 rounded-xl p-4 md:p-6 border border-stone-200 shadow-sm text-left" style="animation-delay: 0.9s;">
+        <div class="flex items-start gap-4">
           <div class="shrink-0 mt-1">
             <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="8" cy="19" r="5" stroke="#6b5d52" stroke-width="1.5"/>
@@ -211,19 +222,20 @@
       </div>
 
     </div>
+
   </section>
 
   <!-- Section 3 : Réalisations -->
-  <section class="h-screen flex flex-col justify-center items-center text-center px-4 md:px-6 hidden md:flex">
-    <h2 class="text-3xl md:text-4xl font-semibold mb-4 fade-in">Réalisations</h2>
-    <p class="text-base md:text-lg text-gray-600 mb-8 fade-in" style="animation-delay: 0.1s;">
+  <section class="md:min-h-screen flex flex-col justify-center items-center text-center px-4 md:px-6 py-12 md:py-0">
+    <h2 class="text-3xl md:text-4xl font-semibold mb-3 md:mb-4 fade-in">Réalisations</h2>
+    <p class="text-base md:text-lg text-gray-600 mb-6 md:mb-8 fade-in" style="animation-delay: 0.1s;">
       Indépendants, artisans, cabinets — un aperçu des projets réalisés et des missions en cours
     </p>
 
-    <div class="max-w-5xl w-full grid grid-cols-2 gap-5">
+    <div class="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5">
 
       <!-- Odéas Courtage & Circa-Rep -->
-      <div class="fade-in bg-white/50 rounded-xl p-6 border border-stone-200 shadow-sm text-left flex flex-col">
+      <div class="fade-in bg-white/50 rounded-xl p-4 md:p-6 border border-stone-200 shadow-sm text-left flex flex-col">
         <div class="mb-3">
           <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="3" y="10" width="22" height="15" rx="2" stroke="#6b5d52" stroke-width="1.5"/>
@@ -243,7 +255,7 @@
       </div>
 
       <!-- Facturation Électronique -->
-      <div class="fade-in bg-white/50 rounded-xl p-6 border border-stone-200 shadow-sm text-left flex flex-col" style="animation-delay: 0.15s;">
+      <div class="fade-in bg-white/50 rounded-xl p-4 md:p-6 border border-stone-200 shadow-sm text-left flex flex-col" style="animation-delay: 0.15s;">
         <div class="mb-3">
           <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M 6 4 L 6 24 L 22 24 L 22 10 L 16 4 Z" stroke="#6b5d52" stroke-width="1.5" stroke-linejoin="round"/>
@@ -264,7 +276,7 @@
       </div>
 
       <!-- Chez Georgette -->
-      <div class="fade-in bg-white/50 rounded-xl p-6 border border-stone-200 shadow-sm text-left flex flex-col" style="animation-delay: 0.3s;">
+      <div class="fade-in bg-white/50 rounded-xl p-4 md:p-6 border border-stone-200 shadow-sm text-left flex flex-col" style="animation-delay: 0.3s;">
         <div class="mb-3">
           <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="6" cy="8" r="3" stroke="#6b5d52" stroke-width="1.5"/>
@@ -285,7 +297,7 @@
       </div>
 
       <!-- CTA -->
-      <div class="fade-in bg-stone-800 rounded-xl p-6 border border-stone-700 shadow-sm text-left flex flex-col justify-between" style="animation-delay: 0.45s;">
+      <div class="fade-in hidden md:flex bg-stone-800 rounded-xl p-4 md:p-6 border border-stone-700 shadow-sm text-left flex-col justify-between" style="animation-delay: 0.45s;">
         <div>
           <div class="mb-3">
             <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -297,17 +309,18 @@
           <h3 class="text-base font-semibold mb-2 text-stone-200">Vous êtes le prochain ?</h3>
           <p class="text-sm text-stone-400 mb-6">Un projet en tête ? Décrivez-moi votre besoin et je vous proposerai une solution adaptée à votre budget.</p>
         </div>
-        <button onclick="scrollToSection(4)" class="bg-stone-100 text-stone-800 text-sm font-medium py-2 px-6 rounded-full hover:bg-white transition duration-300 cursor-pointer">
+        <a href="#contact" class="bg-stone-100 text-stone-800 text-sm font-medium py-2 px-6 rounded-full hover:bg-white transition duration-300">
           Me contacter
-        </button>
+        </a>
       </div>
 
     </div>
+
   </section>
 
   <!-- Section 4 : Contact + Footer -->
-  <section id="contact" class="h-screen flex flex-col justify-center items-center px-6 hidden md:flex">
-    <div class="mt-12 flex flex-col items-center justify-center w-full max-w-6xl h-full">
+  <section id="contact" class="md:min-h-screen flex flex-col justify-center items-center px-6 py-12 md:py-0">
+    <div class="flex flex-col items-center justify-center w-full max-w-6xl">
       <div class="w-full md:w-auto flex flex-col items-center">
         <h2 class="text-4xl font-semibold mb-4 fade-in text-center">Contactez-moi</h2>
         <p class="text-lg text-gray-400 mb-4 fade-in text-center" style="animation-delay: 0.1s;">
@@ -324,7 +337,7 @@
     </div>
 
     <!-- Footer intégré -->
-    <div class="mb-12 text-center text-sm text-gray-400">
+    <div class="mt-12 mb-4 text-center text-sm text-gray-400">
       <div class="flex justify-center space-x-6 mb-4">
         <a href="https://www.github.com/upixto" target="_blank" aria-label="GitHub">
           <img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" class="h-5 w-5">
