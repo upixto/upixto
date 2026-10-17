@@ -1,3 +1,23 @@
+/* Codec Pro (Zetafonts) — déposer les fichiers dans /fonts.
+   Repli automatique sur Outfit (Google Fonts) tant qu'ils sont absents. */
+@font-face {
+  font-family: 'Codec Pro';
+  src: local('Codec Pro Bold'), local('CodecPro-Bold'),
+       url('../fonts/CodecPro-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Codec Pro';
+  src: local('Codec Pro ExtraBold'), local('CodecPro-ExtraBold'),
+       url('../fonts/CodecPro-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 html {
   scroll-snap-type: y mandatory;
 }
@@ -24,21 +44,29 @@ section {
   scroll-snap-align: start;
 }
 
-section:first-of-type {
-  background-color: #e9e5db;
+/* Fonds de section */
+.section-brand {
+  background-color: #E15627;
+  color: #ffffff;
 }
 
-section:nth-of-type(2) {
-  background-color: #dbd5cb;
+.section-cream {
+  background-color: #FFF6EE;
 }
 
-section:nth-of-type(3) {
-  background-color: #cfc8bc;
+.section-white {
+  background-color: #ffffff;
 }
 
-section:nth-of-type(4) {
-  background-color: #18140e;
-  color: #ede8df;
+/* Étiquettes des réalisations */
+.tag {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+  background-color: #FCE3D6;
+  color: #B9431B;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
 }
 
 @media (max-width: 768px) {
@@ -57,9 +85,9 @@ section:nth-of-type(4) {
   }
 }
 
-h1, h2 {
-  font-family: 'Yellowtail', cursive;
-  letter-spacing: 0;
+h1, h2, h3 {
+  font-family: 'Codec Pro', 'Outfit', sans-serif;
+  letter-spacing: -0.01em;
 }
 
 .fade-in {
@@ -144,15 +172,15 @@ h1, h2 {
 .side-menu .dot {
   width: 10px;
   height: 10px;
-  background-color: #7c6f5e;
+  background-color: rgba(42, 24, 16, 0.35);
   border-radius: 50%;
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4), 0 0 0 3px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6);
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .side-menu .dot.active {
-  background-color: #3d2e22;
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6), 0 0 0 3px rgba(0, 0, 0, 0.2);
+  background-color: #2A1810;
+  box-shadow: 0 0 0 2px #ffffff;
   transform: scale(1.4);
 } 

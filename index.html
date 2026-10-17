@@ -3,11 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Upixto</title>
-  <meta name="description" content="Des solutions digitales pour les indépendants, les PME et les particuliers — sur mesure ou recommandées parmi les meilleurs outils existants, avec des tarifs maîtrisés." />
+  <title>Upixto — Accompagnement numérique</title>
+  <meta name="description" content="Accompagnement numérique à Devecey (25) — Le numérique, simplement, pour particuliers et TPE dans le Doubs et la Haute-Saône, à domicile ou en entreprise. Prise en main, dépannage, sécurité et recommandation d'outils adaptés." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Upixto",
+    "description": "Accompagnement numérique pour particuliers et TPE",
+    "url": "https://upixto.fr",
+    "telephone": "+33695464035",
+    "email": "contact@upixto.fr",
+    "address": { "@type": "PostalAddress", "addressLocality": "Devecey", "postalCode": "25870", "addressCountry": "FR" },
+    "areaServed": ["Doubs", "Haute-Saône"]
+  }
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { DEFAULT: '#E15627', dark: '#B9431B', light: '#FCE3D6' },
+            amber: '#D97706',
+            cream: '#FFF6EE',
+            ink: '#2A1810',
+          },
+          fontFamily: {
+            display: ['"Codec Pro"', 'Outfit', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="img/favicon.png">
   <!-- Privacy-friendly analytics by Plausible -->
@@ -17,7 +46,7 @@
     plausible.init()
   </script>
 </head>
-<body class="bg-white text-black tracking-tight">
+<body class="bg-cream text-ink tracking-tight">
 
   <!-- Menu latéral : affichage desktop uniquement -->
   <div class="side-menu hidden lg:flex">
@@ -28,288 +57,235 @@
   </div>
 
   <!-- Section 1 : Intro -->
-  <section class="h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
+  <section class="section-brand h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
 
-    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none overflow-hidden text-white/60">
 
-      <!-- </> -->
-      <svg class="deco-element" style="position:absolute;top:14%;left:6%;--delay:0.4s" width="56" height="32" viewBox="0 0 56 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M 16 4 L 4 16 L 16 28" stroke="#6b5d52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M 24 28 L 32 4" stroke="#6b5d52" stroke-width="2" stroke-linecap="round"/>
-        <path d="M 40 4 L 52 16 L 40 28" stroke="#6b5d52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Smartphone -->
+      <svg class="deco-element" style="position:absolute;top:14%;left:7%;--delay:0.4s" width="34" height="52" viewBox="0 0 34 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="2" width="30" height="48" rx="5" stroke="currentColor" stroke-width="2"/>
+        <line x1="13" y1="43" x2="21" y2="43" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
       </svg>
 
-      <!-- Nœud circuit -->
-      <svg class="deco-element" style="position:absolute;top:10%;right:8%;--delay:0.9s" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="25" cy="25" r="6" stroke="#6b5d52" stroke-width="1.5"/>
-        <line x1="25" y1="19" x2="25" y2="6" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round"/>
-        <line x1="25" y1="31" x2="25" y2="44" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round"/>
-        <line x1="19" y1="25" x2="6" y2="25" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round"/>
-        <line x1="31" y1="25" x2="44" y2="25" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round"/>
-        <circle cx="25" cy="6" r="3" stroke="#6b5d52" stroke-width="1.5"/>
-        <circle cx="25" cy="44" r="3" stroke="#6b5d52" stroke-width="1.5"/>
-        <circle cx="6" cy="25" r="3" stroke="#6b5d52" stroke-width="1.5"/>
-        <circle cx="44" cy="25" r="3" stroke="#6b5d52" stroke-width="1.5"/>
+      <!-- Bulle d'aide -->
+      <svg class="deco-element" style="position:absolute;top:11%;right:9%;--delay:0.9s" width="54" height="48" viewBox="0 0 54 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 6 4 L 48 4 C 50 4, 52 6, 52 8 L 52 32 C 52 34, 50 36, 48 36 L 20 36 L 10 45 L 10 36 L 6 36 C 4 36, 2 34, 2 32 L 2 8 C 2 6, 4 4, 6 4 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M 22 15 C 22 11, 32 11, 32 15 C 32 19, 27 19, 27 23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="27" cy="29" r="1.2" stroke="currentColor" stroke-width="2"/>
       </svg>
 
       <!-- Signal wifi (desktop uniquement) -->
       <svg class="deco-element hidden md:block" style="position:absolute;top:44%;right:5%;--delay:1.5s" width="44" height="36" viewBox="0 0 44 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M 2 22 C 2 10, 10 2, 22 2 C 34 2, 42 10, 42 22" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M 8 22 C 8 13, 14 7, 22 7 C 30 7, 36 13, 36 22" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M 14 22 C 14 16, 18 12, 22 12 C 26 12, 30 16, 30 22" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round"/>
-        <circle cx="22" cy="32" r="3" stroke="#6b5d52" stroke-width="1.5"/>
+        <path d="M 2 22 C 2 10, 10 2, 22 2 C 34 2, 42 10, 42 22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M 8 22 C 8 13, 14 7, 22 7 C 30 7, 36 13, 36 22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M 14 22 C 14 16, 18 12, 22 12 C 26 12, 30 16, 30 22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="22" cy="32" r="3" stroke="currentColor" stroke-width="2"/>
       </svg>
 
       <!-- Curseur souris -->
-      <svg class="deco-element" style="position:absolute;bottom:22%;right:9%;--delay:2.0s" width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M 4 4 L 4 26 L 10 20 L 14 28 L 18 26 L 14 18 L 22 18 Z" stroke="#6b5d52" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+      <svg class="deco-element" style="position:absolute;bottom:22%;right:10%;--delay:2.0s" width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 4 4 L 4 26 L 10 20 L 14 28 L 18 26 L 14 18 L 22 18 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
       </svg>
 
-      <!-- { } -->
-      <svg class="deco-element" style="position:absolute;bottom:16%;left:7%;--delay:2.6s" width="44" height="40" viewBox="0 0 44 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M 16 4 C 10 4, 8 8, 8 13 C 8 17, 5 19, 5 20 C 5 21, 8 23, 8 27 C 8 32, 10 36, 16 36" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M 28 4 C 34 4, 36 8, 36 13 C 36 17, 39 19, 39 20 C 39 21, 36 23, 36 27 C 36 32, 34 36, 28 36" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round"/>
+      <!-- Cadenas -->
+      <svg class="deco-element" style="position:absolute;bottom:16%;left:8%;--delay:2.6s" width="38" height="44" viewBox="0 0 38 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3" y="19" width="32" height="22" rx="4" stroke="currentColor" stroke-width="2"/>
+        <path d="M 10 19 L 10 12 C 10 7, 14 3, 19 3 C 24 3, 28 7, 28 12 L 28 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <line x1="19" y1="28" x2="19" y2="33" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
       </svg>
 
-      <!-- Grille pixel (desktop uniquement) -->
-      <svg class="deco-element hidden md:block" style="position:absolute;top:54%;left:4%;--delay:3.1s" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="1" y="1" width="7" height="7" stroke="#6b5d52" stroke-width="1.2"/>
-        <rect x="11" y="1" width="7" height="7" stroke="#6b5d52" stroke-width="1.2"/>
-        <rect x="21" y="1" width="7" height="7" stroke="#6b5d52" stroke-width="1.2"/>
-        <rect x="1" y="11" width="7" height="7" stroke="#6b5d52" stroke-width="1.2"/>
-        <rect x="11" y="11" width="7" height="7" stroke="#6b5d52" stroke-width="1.2"/>
-        <rect x="21" y="11" width="7" height="7" stroke="#6b5d52" stroke-width="1.2"/>
-        <rect x="1" y="21" width="7" height="7" stroke="#6b5d52" stroke-width="1.2"/>
-        <rect x="11" y="21" width="7" height="7" stroke="#6b5d52" stroke-width="1.2"/>
-        <rect x="21" y="21" width="7" height="7" stroke="#6b5d52" stroke-width="1.2"/>
+      <!-- Ordinateur (desktop uniquement) -->
+      <svg class="deco-element hidden md:block" style="position:absolute;top:52%;left:4%;--delay:3.1s" width="48" height="38" viewBox="0 0 48 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="6" y="3" width="36" height="24" rx="2" stroke="currentColor" stroke-width="2"/>
+        <path d="M 2 34 L 46 34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M 6 27 L 2 34 M 42 27 L 46 34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
       </svg>
 
     </div>
 
-    <h1 class="text-6xl md:text-7xl font-extrabold mb-4 fade-in">Upixto</h1>
-    <p class="text-xl md:text-2xl text-gray-700 max-w-2xl fade-in" style="animation-delay: 0.3s;">
-      Des solutions digitales pour les indépendants, les PME et les particuliers — sur mesure ou recommandées parmi les meilleurs outils existants, avec des tarifs maîtrisés.
+    <p class="text-sm md:text-base uppercase tracking-[0.3em] font-semibold text-white/90 mb-5 fade-in">Accompagnement numérique</p>
+    <h1 class="font-display text-7xl md:text-9xl font-extrabold text-white mb-6 fade-in" style="animation-delay: 0.15s;">Upixto</h1>
+    <p class="font-display text-2xl md:text-4xl font-bold text-white max-w-3xl leading-tight fade-in" style="animation-delay: 0.3s;">
+      Le numérique, simplement,<br class="hidden sm:block"> pour particuliers et TPE.
     </p>
-    
-    <!-- Bouton de contact -->
-    <div class="mt-16">
-      <a href="#contact" class="bg-stone-800 text-stone-100 font-medium py-3 px-8 rounded-full shadow-md hover:bg-stone-900 transition duration-300 fade-in" style="animation-delay: 0.5s;">
+
+    <div class="mt-14 flex flex-col sm:flex-row gap-4 items-center fade-in" style="animation-delay: 0.5s;">
+      <a href="#contact" class="bg-white text-brand-dark font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-cream hover:scale-105 transition duration-300">
         Contactez-moi
+      </a>
+      <a href="#services" class="text-white font-semibold py-3 px-8 rounded-full border-2 border-white/80 hover:bg-white/10 transition duration-300">
+        Mes services
       </a>
     </div>
 
   </section>
 
-  <!-- Section 2 : Mon approche -->
-  <section class="md:min-h-screen flex flex-col justify-center items-center text-center px-4 md:px-6 py-12 md:py-0">
-    <h2 class="text-3xl md:text-4xl font-semibold mb-3 md:mb-4 fade-in">Mon approche</h2>
-    <p class="text-base md:text-lg text-gray-600 mb-7 md:mb-10 fade-in" style="animation-delay: 0.1s;">
-      Selon votre situation, deux approches complémentaires s'offrent à vous
+  <!-- Section 2 : Services -->
+  <section id="services" class="section-cream md:min-h-screen flex flex-col justify-center items-center text-center px-4 md:px-6 py-14 md:py-12">
+    <h2 class="font-display text-4xl md:text-5xl font-extrabold text-brand mb-3 md:mb-4 fade-in">Mon accompagnement</h2>
+    <p class="text-base md:text-lg text-ink/70 mb-8 md:mb-10 max-w-2xl fade-in" style="animation-delay: 0.1s;">
+      À votre rythme, sans jargon : je ne me contente pas de faire à votre place, je vous aide à comprendre et à maîtriser vos outils numériques.
     </p>
 
-    <!-- Vue simplifiée mobile uniquement -->
-    <div class="md:hidden max-w-xl w-full flex flex-col gap-3 fade-in" style="animation-delay: 0.2s;">
-      <div class="bg-white/50 rounded-xl p-4 border border-stone-200 shadow-sm text-left">
-        <p class="text-xs uppercase tracking-widest text-stone-400 mb-2">Développement sur mesure</p>
-        <h3 class="text-sm font-semibold text-stone-700 mb-2">Une solution conçue pour vous</h3>
-        <p class="text-xs text-gray-500 mb-3">J'analyse vos besoins, coordonne les développeurs, valide la solution et vous accompagne dans la prise en main.</p>
-        <ul class="text-xs text-stone-400 space-y-1">
-          <li>· Analyse & Cadrage</li>
-          <li>· Pilotage & Coordination</li>
-          <li>· Recette & Configuration</li>
-          <li>· Prise en main & Support</li>
-        </ul>
-      </div>
-      <div class="bg-white/50 rounded-xl p-4 border border-stone-200 shadow-sm text-left">
-        <p class="text-xs uppercase tracking-widest text-stone-400 mb-2">Solution existante</p>
-        <h3 class="text-sm font-semibold text-stone-700 mb-2">Veille & Recommandation</h3>
-        <p class="text-xs text-gray-500">Parfois la solution idéale existe déjà. Je réalise une veille technologique active pour identifier les outils qui correspondent à vos besoins — et vous accompagne dans leur sélection et leur mise en place, sans développement inutile.</p>
-      </div>
-    </div>
+    <div class="max-w-5xl w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5 mb-5 md:mb-8">
 
-    <!-- Vue détaillée desktop uniquement -->
-    <div class="hidden md:block max-w-5xl w-full">
-
-      <p class="text-left text-xs uppercase tracking-widest text-stone-400 mb-3 fade-in">Développement sur mesure</p>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5 mb-5 md:mb-8">
-
-        <div class="fade-in bg-white/50 rounded-xl p-4 md:p-6 border border-stone-200 shadow-sm text-left">
-          <div class="flex items-center gap-3 mb-2 md:block">
-            <div class="shrink-0 md:mb-4">
-              <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="11" cy="11" r="7" stroke="#6b5d52" stroke-width="1.5"/>
-                <line x1="16" y1="16" x2="24" y2="24" stroke="#6b5d52" stroke-width="2" stroke-linecap="round"/>
-                <line x1="7" y1="11" x2="15" y2="11" stroke="#6b5d52" stroke-width="1.2" stroke-linecap="round"/>
-                <line x1="11" y1="7" x2="11" y2="15" stroke="#6b5d52" stroke-width="1.2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3 class="text-base font-semibold text-stone-700 md:mb-2">Analyse & Cadrage</h3>
-          </div>
-          <p class="text-sm text-gray-600">J'analyse vos besoins, recense les cas d'usage et rédige les spécifications de votre solution</p>
-        </div>
-
-        <div class="fade-in bg-white/50 rounded-xl p-4 md:p-6 border border-stone-200 shadow-sm text-left" style="animation-delay: 0.2s;">
-          <div class="flex items-center gap-3 mb-2 md:block">
-            <div class="shrink-0 md:mb-4">
-              <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="2" y="4" width="24" height="20" rx="2" stroke="#6b5d52" stroke-width="1.5"/>
-                <path d="M 7 11 L 12 14 L 7 17" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <line x1="15" y1="17" x2="22" y2="17" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3 class="text-base font-semibold text-stone-700 md:mb-2">Pilotage & Coordination</h3>
-          </div>
-          <p class="text-sm text-gray-600">Je coordonne des développeurs sélectionnés selon les contraintes techniques de votre projet</p>
-        </div>
-
-        <div class="fade-in bg-white/50 rounded-xl p-4 md:p-6 border border-stone-200 shadow-sm text-left" style="animation-delay: 0.4s;">
-          <div class="flex items-center gap-3 mb-2 md:block">
-            <div class="shrink-0 md:mb-4">
-              <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M 14 2 L 25 6 L 25 14 C 25 20, 20 25, 14 27 C 8 25, 3 20, 3 14 L 3 6 Z" stroke="#6b5d52" stroke-width="1.5" stroke-linejoin="round"/>
-                <path d="M 9 14 L 12 17 L 19 10" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3 class="text-base font-semibold text-stone-700 md:mb-2">Recette & Configuration</h3>
-          </div>
-          <p class="text-sm text-gray-600">Je réalise les tests utilisateurs sur la solution livrée et configure les environnements pour la mise en production</p>
-        </div>
-
-        <div class="fade-in bg-white/50 rounded-xl p-4 md:p-6 border border-stone-200 shadow-sm text-left" style="animation-delay: 0.6s;">
-          <div class="flex items-center gap-3 mb-2 md:block">
-            <div class="shrink-0 md:mb-4">
-              <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M 6 14 C 6 8, 9 4, 14 4 C 19 4, 22 8, 22 14" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-                <rect x="3" y="13" width="5" height="7" rx="2" stroke="#6b5d52" stroke-width="1.5"/>
-                <rect x="20" y="13" width="5" height="7" rx="2" stroke="#6b5d52" stroke-width="1.5"/>
-                <path d="M 22 19 C 22 22, 19 24, 14 24" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-              </svg>
-            </div>
-            <h3 class="text-base font-semibold text-stone-700 md:mb-2">Prise en main & Support</h3>
-          </div>
-          <p class="text-sm text-gray-600">J'accompagne les utilisateurs dans la prise en main de la solution et assure le support après la mise en production</p>
-        </div>
-
-      </div>
-
-      <!-- Divider -->
-      <div class="flex items-center gap-4 mb-5 md:mb-8 fade-in" style="animation-delay: 0.7s;">
-        <div class="flex-1 border-t border-stone-200"></div>
-        <span class="text-xs uppercase tracking-widest text-stone-400 px-2">ou</span>
-        <div class="flex-1 border-t border-stone-200"></div>
-      </div>
-
-      <p class="text-left text-xs uppercase tracking-widest text-stone-400 mb-3 fade-in" style="animation-delay: 0.8s;">Solution existante</p>
-      <div class="fade-in bg-white/50 rounded-xl p-4 md:p-6 border border-stone-200 shadow-sm text-left" style="animation-delay: 0.9s;">
-        <div class="flex items-start gap-4">
-          <div class="shrink-0 mt-1">
+      <div class="fade-in bg-white rounded-2xl p-5 md:p-6 border border-brand/15 shadow-sm text-left">
+        <div class="flex items-center gap-3 mb-2 md:block">
+          <div class="shrink-0 md:mb-4 w-12 h-12 rounded-xl flex items-center justify-center text-white bg-brand">
             <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="8" cy="19" r="5" stroke="#6b5d52" stroke-width="1.5"/>
-              <circle cx="20" cy="19" r="5" stroke="#6b5d52" stroke-width="1.5"/>
-              <path d="M 13 19 L 15 19" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="M 8 14 L 8 10 C 8 9, 9 8, 10 8 L 12 7" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M 20 14 L 20 10 C 20 9, 19 8, 18 8 L 16 7" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M 6 14 C 6 8, 9 4, 14 4 C 19 4, 22 8, 22 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <rect x="3" y="13" width="5" height="7" rx="2" stroke="currentColor" stroke-width="1.8"/>
+              <rect x="20" y="13" width="5" height="7" rx="2" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M 22 19 C 22 22, 19 24, 14 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
             </svg>
           </div>
-          <div>
-            <h3 class="text-base font-semibold mb-2 text-stone-700">Veille & Recommandation</h3>
-            <p class="text-sm text-gray-600">
-              Parfois, la solution idéale existe ! Je réalise une veille technologique active pour identifier les outils qui correspondent exactement à vos besoins — et vous accompagne dans leur sélection et leur mise en place, sans développement inutile.
-            </p>
-          </div>
+          <h3 class="font-display text-lg font-bold md:mb-2">Prise en main</h3>
         </div>
+        <p class="text-sm text-ink/70">Ordinateur, smartphone, tablette, logiciels : je vous explique pas à pas, pour que vous compreniez ce que vous faites et gagniez en autonomie.</p>
       </div>
 
+      <div class="fade-in bg-white rounded-2xl p-5 md:p-6 border border-brand/15 shadow-sm text-left" style="animation-delay: 0.15s;">
+        <div class="flex items-center gap-3 mb-2 md:block">
+          <div class="shrink-0 md:mb-4 w-12 h-12 rounded-xl flex items-center justify-center text-white bg-ink">
+            <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="4" width="24" height="20" rx="2" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M 7 11 L 12 14 L 7 17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="15" y1="17" x2="22" y2="17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-bold md:mb-2">Dépannage & installation</h3>
+        </div>
+        <p class="text-sm text-ink/70">Appareil qui bloque, messagerie, imprimante, sauvegarde : je résous le problème avec vous, en expliquant chaque étape.</p>
+      </div>
+
+      <div class="fade-in bg-white rounded-2xl p-5 md:p-6 border border-brand/15 shadow-sm text-left" style="animation-delay: 0.3s;">
+        <div class="flex items-center gap-3 mb-2 md:block">
+          <div class="shrink-0 md:mb-4 w-12 h-12 rounded-xl flex items-center justify-center text-white bg-brand-dark">
+            <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 14 2 L 25 6 L 25 14 C 25 20, 20 25, 14 27 C 8 25, 3 20, 3 14 L 3 6 Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="M 9 14 L 12 17 L 19 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-bold md:mb-2">Sécurité & bons réflexes</h3>
+        </div>
+        <p class="text-sm text-ink/70">Mots de passe, sauvegardes, arnaques en ligne : les bonnes pratiques pour protéger vos données.</p>
+      </div>
+
+      <!-- Recommandation d'outils -->
+      <div class="fade-in bg-white rounded-2xl p-5 md:p-6 border border-brand/15 shadow-sm text-left" style="animation-delay: 0.45s;">
+        <div class="flex items-center gap-3 mb-2 md:block">
+          <div class="shrink-0 md:mb-4 w-12 h-12 rounded-xl flex items-center justify-center text-white bg-amber">
+            <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/>
+              <line x1="16" y1="16" x2="24" y2="24" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M 8 11 L 10 13 L 14 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-bold md:mb-2">Recommandation d'outils</h3>
+        </div>
+        <p class="text-sm text-ink/70">Grâce à une veille active, je vous conseille les outils adaptés à vos besoins et à votre budget, puis je vous aide à les mettre en place.</p>
+      </div>
+
+    </div>
+
+    <!-- Pour qui -->
+    <div class="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5 text-left">
+      <div class="fade-in rounded-2xl p-5 md:p-6 bg-brand-light" style="animation-delay: 0.7s;">
+        <p class="font-display text-lg font-bold text-brand-dark mb-2">Particuliers</p>
+        <p class="text-sm text-ink/80">Gagner en autonomie avec vos appareils, sécuriser vos comptes, faire vos démarches en ligne sereinement.</p>
+      </div>
+      <div class="fade-in rounded-2xl p-5 md:p-6 bg-brand-light" style="animation-delay: 0.8s;">
+        <p class="font-display text-lg font-bold text-brand-dark mb-2">TPE & indépendants</p>
+        <p class="text-sm text-ink/80">Messagerie professionnelle, site vitrine, facturation électronique : les bons outils, bien configurés, sans surcoût inutile.</p>
+      </div>
     </div>
 
   </section>
 
   <!-- Section 3 : Réalisations -->
-  <section class="md:min-h-screen flex flex-col justify-center items-center text-center px-4 md:px-6 py-12 md:py-0">
-    <h2 class="text-3xl md:text-4xl font-semibold mb-3 md:mb-4 fade-in">Réalisations</h2>
-    <p class="text-base md:text-lg text-gray-600 mb-6 md:mb-8 fade-in" style="animation-delay: 0.1s;">
-      Indépendants, artisans, cabinets — un aperçu des projets réalisés et des missions en cours
+  <section class="section-white md:min-h-screen flex flex-col justify-center items-center text-center px-4 md:px-6 py-14 md:py-12">
+    <p class="text-sm uppercase tracking-[0.25em] font-semibold text-brand-dark mb-3 fade-in">En entreprise</p>
+    <h2 class="font-display text-4xl md:text-5xl font-extrabold text-brand mb-3 md:mb-4 fade-in">Réalisations</h2>
+    <p class="text-base md:text-lg text-ink/70 mb-8 max-w-2xl fade-in" style="animation-delay: 0.1s;">
+      Cabinets, commerces, indépendants : des missions menées auprès de professionnels, de l'analyse du besoin jusqu'à la prise en main des outils.
     </p>
 
     <div class="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5">
 
       <!-- Odéas Courtage & Circa-Rep -->
-      <div class="fade-in bg-white/50 rounded-xl p-4 md:p-6 border border-stone-200 shadow-sm text-left flex flex-col">
-        <div class="mb-3">
-          <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="3" y="10" width="22" height="15" rx="2" stroke="#6b5d52" stroke-width="1.5"/>
-            <path d="M 9 10 L 9 7 C 9 5.5, 10.5 4, 14 4 C 17.5 4, 19 5.5, 19 7 L 19 10" stroke="#6b5d52" stroke-width="1.5" stroke-linecap="round"/>
-            <line x1="3" y1="17" x2="25" y2="17" stroke="#6b5d52" stroke-width="1.2" stroke-linecap="round"/>
+      <div class="fade-in bg-cream rounded-2xl p-5 md:p-6 border border-brand/15 shadow-sm text-left flex flex-col">
+        <div class="mb-3 text-brand">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="10" width="22" height="15" rx="2" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M 9 10 L 9 7 C 9 5.5, 10.5 4, 14 4 C 17.5 4, 19 5.5, 19 7 L 19 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="3" y1="17" x2="25" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
           </svg>
         </div>
-        <h3 class="text-base font-semibold mb-0.5 text-stone-700">Odéas Courtage & Circa-Rep</h3>
-        <p class="text-xs text-stone-400 mb-3">Cabinets de courtage · Colmar (68) & Cayenne (973)</p>
-        <p class="text-sm text-gray-600 mb-4 flex-1">Déploiement d'un écosystème digital complet : hébergement cloud, site vitrine, messagerie professionnelle et CRM développé sur mesure en collaboration avec <a href="https://github.com/gauthier-th" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-stone-800 transition">@gauthier-th</a>.</p>
+        <h3 class="font-display text-lg font-bold mb-0.5">Odéas Courtage & Circa-Rep</h3>
+        <p class="text-xs font-semibold text-brand-dark mb-3">Cabinets de courtage · Colmar (68) & Cayenne (973)</p>
+        <p class="text-sm text-ink/70 mb-4 flex-1">Déploiement d'un écosystème digital complet : hébergement cloud, site vitrine, messagerie professionnelle et CRM développé sur mesure en collaboration avec <a href="https://github.com/gauthier-th" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-brand transition">@gauthier-th</a>.</p>
         <div class="flex gap-2 flex-wrap">
-          <span class="text-xs bg-stone-100 text-stone-600 px-2 py-1 rounded-full">Nextcloud</span>
-          <span class="text-xs bg-stone-100 text-stone-600 px-2 py-1 rounded-full">WordPress</span>
-          <span class="text-xs bg-stone-100 text-stone-600 px-2 py-1 rounded-full">Exchange</span>
-          <span class="text-xs bg-stone-100 text-stone-600 px-2 py-1 rounded-full">CRM sur mesure</span>
+          <span class="tag">Nextcloud</span>
+          <span class="tag">WordPress</span>
+          <span class="tag">Exchange</span>
+          <span class="tag">CRM sur mesure</span>
         </div>
       </div>
 
       <!-- Facturation Électronique -->
-      <div class="fade-in bg-white/50 rounded-xl p-4 md:p-6 border border-stone-200 shadow-sm text-left flex flex-col" style="animation-delay: 0.15s;">
-        <div class="mb-3">
-          <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M 6 4 L 6 24 L 22 24 L 22 10 L 16 4 Z" stroke="#6b5d52" stroke-width="1.5" stroke-linejoin="round"/>
-            <path d="M 16 4 L 16 10 L 22 10" stroke="#6b5d52" stroke-width="1.5" stroke-linejoin="round"/>
-            <line x1="9" y1="15" x2="19" y2="15" stroke="#6b5d52" stroke-width="1.2" stroke-linecap="round"/>
-            <line x1="9" y1="19" x2="16" y2="19" stroke="#6b5d52" stroke-width="1.2" stroke-linecap="round"/>
+      <div class="fade-in bg-cream rounded-2xl p-5 md:p-6 border border-brand/15 shadow-sm text-left flex flex-col" style="animation-delay: 0.15s;">
+        <div class="mb-3 text-brand">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 6 4 L 6 24 L 22 24 L 22 10 L 16 4 Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M 16 4 L 16 10 L 22 10" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            <line x1="9" y1="15" x2="19" y2="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="9" y1="19" x2="16" y2="19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
           </svg>
         </div>
-        <h3 class="text-base font-semibold mb-0.5 text-stone-700">Facturation Électronique</h3>
-        <div class="flex items-center gap-2 mb-3">
-          <p class="text-xs text-stone-400">Mise en conformité</p>
-        </div>
-        <p class="text-sm text-gray-600 mb-3 flex-1">Accompagnement dans le choix d'une plateforme agréée (PA) adaptée à votre activité, et dans son intégration à votre workflow de facturation existant.</p>
+        <h3 class="font-display text-lg font-bold mb-0.5">Facturation Électronique</h3>
+        <p class="text-xs font-semibold text-brand-dark mb-3">Mise en conformité</p>
+        <p class="text-sm text-ink/70 mb-4 flex-1">Accompagnement dans le choix d'une plateforme agréée (PA) adaptée à votre activité, et dans son intégration à votre workflow de facturation existant.</p>
         <div class="flex gap-2 flex-wrap">
-          <span class="text-xs bg-stone-100 text-stone-600 px-2 py-1 rounded-full">Conseil</span>
-          <span class="text-xs bg-stone-100 text-stone-600 px-2 py-1 rounded-full">Veille technologique</span>
+          <span class="tag">Conseil</span>
+          <span class="tag">Veille technologique</span>
         </div>
       </div>
 
       <!-- Chez Georgette -->
-      <div class="fade-in bg-white/50 rounded-xl p-4 md:p-6 border border-stone-200 shadow-sm text-left flex flex-col" style="animation-delay: 0.3s;">
-        <div class="mb-3">
-          <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="6" cy="8" r="3" stroke="#6b5d52" stroke-width="1.5"/>
-            <circle cx="6" cy="20" r="3" stroke="#6b5d52" stroke-width="1.5"/>
-            <circle cx="22" cy="14" r="3" stroke="#6b5d52" stroke-width="1.5"/>
-            <path d="M 9 8 L 17 12" stroke="#6b5d52" stroke-width="1.2" stroke-linecap="round"/>
-            <path d="M 9 20 L 17 16" stroke="#6b5d52" stroke-width="1.2" stroke-linecap="round"/>
+      <div class="fade-in bg-cream rounded-2xl p-5 md:p-6 border border-brand/15 shadow-sm text-left flex flex-col" style="animation-delay: 0.3s;">
+        <div class="mb-3 text-brand">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="6" cy="8" r="3" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="6" cy="20" r="3" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="22" cy="14" r="3" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M 9 8 L 19 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M 9 20 L 19 15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
           </svg>
         </div>
-        <h3 class="text-base font-semibold mb-0.5 text-stone-700">Chez Georgette</h3>
-        <p class="text-xs text-stone-400 mb-3">Salon de thé · Vesoul (70)</p>
-        <p class="text-sm text-gray-600 mb-4 flex-1">Mise en place d'un workflow de centralisation des factures d'achats (scan et mails). Configuration de l'hébergement et du nom de domaine pour un site vitrine.</p>
+        <h3 class="font-display text-lg font-bold mb-0.5">Chez Georgette</h3>
+        <p class="text-xs font-semibold text-brand-dark mb-3">Salon de thé · Vesoul (70)</p>
+        <p class="text-sm text-ink/70 mb-4 flex-1">Mise en place d'un workflow de centralisation des factures d'achats (scan et mails). Configuration de l'hébergement et du nom de domaine pour un site vitrine.</p>
         <div class="flex gap-2 flex-wrap">
-          <span class="text-xs bg-stone-100 text-stone-600 px-2 py-1 rounded-full">Automatisation</span>
-          <span class="text-xs bg-stone-100 text-stone-600 px-2 py-1 rounded-full">Dématérialisation</span>
-          <span class="text-xs bg-stone-100 text-stone-600 px-2 py-1 rounded-full">Hébergement</span>
+          <span class="tag">Automatisation</span>
+          <span class="tag">Dématérialisation</span>
+          <span class="tag">Hébergement</span>
         </div>
       </div>
 
       <!-- CTA -->
-      <div class="fade-in hidden md:flex bg-stone-800 rounded-xl p-4 md:p-6 border border-stone-700 shadow-sm text-left flex-col justify-between" style="animation-delay: 0.45s;">
+      <div class="fade-in hidden md:flex bg-brand rounded-2xl p-5 md:p-6 shadow-md text-left flex-col justify-between" style="animation-delay: 0.45s;">
         <div>
-          <div class="mb-3">
-            <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="14" cy="14" r="11" stroke="#a89880" stroke-width="1.5"/>
-              <line x1="14" y1="9" x2="14" y2="19" stroke="#a89880" stroke-width="1.5" stroke-linecap="round"/>
-              <line x1="9" y1="14" x2="19" y2="14" stroke="#a89880" stroke-width="1.5" stroke-linecap="round"/>
+          <div class="mb-3 text-white">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8"/>
+              <line x1="14" y1="9" x2="14" y2="19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="9" y1="14" x2="19" y2="14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
             </svg>
           </div>
-          <h3 class="text-base font-semibold mb-2 text-stone-200">Vous êtes le prochain ?</h3>
-          <p class="text-sm text-stone-400 mb-6">Un projet en tête ? Décrivez-moi votre besoin et je vous proposerai une solution adaptée à votre budget.</p>
+          <h3 class="font-display text-2xl font-extrabold mb-2 text-white">Et pour les particuliers ?</h3>
+          <p class="text-base text-white mb-6">La même méthode, appliquée à votre quotidien : vos appareils, vos comptes, vos démarches. Parlons-en, et je vous proposerai un accompagnement adapté à votre situation et à votre budget.</p>
         </div>
-        <a href="#contact" class="bg-stone-100 text-stone-800 text-sm font-medium py-2 px-6 rounded-full hover:bg-white transition duration-300">
+        <a href="#contact" class="self-start bg-white text-brand-dark text-sm font-semibold py-2.5 px-6 rounded-full hover:bg-cream transition duration-300">
           Me contacter
         </a>
       </div>
@@ -319,63 +295,75 @@
   </section>
 
   <!-- Section 4 : Contact + Footer -->
-  <section id="contact" class="md:min-h-screen flex flex-col justify-center items-center px-6 py-12 md:py-0">
-    <div class="flex flex-col items-center justify-center w-full max-w-6xl">
-      <div class="w-full md:w-auto flex flex-col items-center">
-        <h2 class="text-4xl font-semibold mb-4 fade-in text-center">Contactez-moi</h2>
-        <p class="text-lg text-gray-400 mb-4 fade-in text-center" style="animation-delay: 0.1s;">
-          Vous avez un projet en tête ? Je serais ravi d'en discuter avec vous.
-        </p>
-        <p class="text-lg text-gray-400 mb-10 text-center fade-in" style="animation-delay: 0.2s;">
-          Décrivez-moi votre projet et je vous proposerai une solution adaptée à votre besoin et à votre budget.
-        </p>
-        <!-- Bouton pour envoyer un mail -->
-        <a href="mailto:contact@upixto.fr?subject=Prise de contact" class="bg-stone-100 text-stone-800 font-medium py-3 px-8 rounded-full shadow-md hover:bg-stone-200 transition duration-300 fade-in" style="animation-delay: 0.3s;">
-          Envoyer un mail
+  <section id="contact" class="section-brand md:min-h-screen flex flex-col justify-center items-center px-6 py-14 md:py-0">
+    <div class="w-full max-w-3xl text-center">
+      <h2 class="font-display text-5xl md:text-6xl font-extrabold text-white mb-4 fade-in">Contactez-moi</h2>
+      <p class="text-xl md:text-2xl text-white font-medium mb-8 fade-in" style="animation-delay: 0.1s;">
+        Un appareil qui résiste, un outil à choisir, une question ?
+      </p>
+
+      <!-- Coordonnées -->
+      <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center fade-in" style="animation-delay: 0.2s;">
+        <a href="tel:+33695464035" class="w-full max-w-xs sm:w-64 inline-flex items-center justify-center gap-3 bg-white border-2 border-white text-brand-dark font-display font-bold text-lg py-3 px-7 rounded-full shadow-lg hover:bg-cream hover:scale-105 transition duration-300">
+          <svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M 6 3 L 10 3 L 12 9 L 9 11 C 10.5 14.5, 13.5 17.5, 17 19 L 19 16 L 25 18 L 25 22 C 25 23.5, 23.5 25, 22 25 C 12 24, 4 16, 3 6 C 3 4.5, 4.5 3, 6 3 Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+          </svg>
+          06 95 46 40 35
+        </a>
+        <a href="mailto:contact@upixto.fr?subject=Prise de contact" class="w-full max-w-xs sm:w-64 inline-flex items-center justify-center gap-3 text-white font-display font-bold text-lg py-3 px-7 rounded-full border-2 border-white/80 hover:bg-white/10 transition duration-300">
+          <svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="3" y="6" width="22" height="16" rx="2" stroke="currentColor" stroke-width="2.2"/>
+            <path d="M 4 8 L 14 15 L 24 8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          contact@upixto.fr
         </a>
       </div>
+
+      <!-- Zone d'intervention -->
+      <p class="mt-8 text-base md:text-lg text-white max-w-xl mx-auto fade-in" style="animation-delay: 0.3s;">
+        Basé à Devecey, j'interviens à domicile et en entreprise dans le <strong>Doubs</strong> et la <strong>Haute-Saône</strong>.
+        Vous habitez un peu plus loin ? Contactez-moi, nous verrons ensemble ce qui est possible.
+      </p>
     </div>
 
     <!-- Footer intégré -->
-    <div class="mt-12 mb-4 text-center text-sm text-gray-400">
+    <div class="mt-10 md:mt-12 mb-4 text-center text-sm text-white/85">
       <div class="flex justify-center space-x-6 mb-4">
-        <a href="https://www.github.com/upixto" target="_blank" aria-label="GitHub">
+        <a href="https://www.github.com/upixto" target="_blank" aria-label="GitHub" class="hover:opacity-75 transition">
           <img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" class="h-5 w-5">
         </a>
-        <a href="https://www.instagram.com/upixto" target="_blank" aria-label="Instagram">
+        <a href="https://www.instagram.com/upixto" target="_blank" aria-label="Instagram" class="hover:opacity-75 transition">
           <img src="https://cdn.simpleicons.org/instagram/ffffff" alt="Instagram" class="h-5 w-5">
         </a>
-        <a href="https://share.google/G4T1l7vPePNHjzuJv" target="_blank" aria-label="Google Business">
+        <a href="https://share.google/G4T1l7vPePNHjzuJv" target="_blank" aria-label="Google Business" class="hover:opacity-75 transition">
           <img src="https://cdn.simpleicons.org/googlemaps/ffffff" alt="Google Business" class="h-5 w-5">
         </a>
       </div>
-      <div class="flex items-center justify-center space-x-2 mb-2">
-        <span>contact@upixto.fr</span>
-      </div>
-      © <span id="year"></span> Upixto. Tous droits réservés. · <a href="#" class="open-legal-modal hover:text-stone-300 transition">Mentions légales</a>
+      © <span id="year"></span> Upixto. Tous droits réservés. · <a href="#" class="open-legal-modal underline underline-offset-2 hover:text-white transition">Mentions légales</a>
     </div>
   </section>
 
   <!-- Modale mentions légales -->
   <div id="legal-modal" class="fixed inset-0 z-[200] flex items-center justify-center p-6 hidden" role="dialog" aria-modal="true" aria-labelledby="legal-modal-title">
-    <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" id="legal-modal-backdrop"></div>
-    <div class="relative bg-[#f5f2ed] rounded-2xl shadow-xl max-w-lg w-full max-h-[80vh] overflow-y-auto p-8 z-10">
-      <button id="legal-modal-close" class="absolute top-4 right-4 text-stone-400 hover:text-stone-700 transition" aria-label="Fermer">
+    <div class="absolute inset-0 bg-ink/60 backdrop-blur-sm" id="legal-modal-backdrop"></div>
+    <div class="relative bg-cream rounded-2xl shadow-xl max-w-lg w-full max-h-[80vh] overflow-y-auto p-8 z-10">
+      <button id="legal-modal-close" class="absolute top-4 right-4 text-ink/40 hover:text-brand transition" aria-label="Fermer">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <line x1="4" y1="4" x2="16" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
           <line x1="16" y1="4" x2="4" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
       </button>
-      <h2 id="legal-modal-title" class="text-2xl font-semibold mb-6 text-stone-800">Mentions légales</h2>
-      <div class="text-sm text-stone-600 space-y-5 leading-relaxed">
+      <h2 id="legal-modal-title" class="font-display text-2xl font-extrabold mb-6 text-brand">Mentions légales</h2>
+      <div class="text-sm text-ink/80 space-y-5 leading-relaxed">
         <div>
-          <p class="font-semibold text-stone-700 mb-1">Éditeur du site</p>
+          <p class="font-semibold text-ink mb-1">Éditeur du site</p>
           <p>Upixto — EI Tom Roth<br>
           SIRET : 88473069800039<br>
+          06 95 46 40 35<br>
           contact@upixto.fr</p>
         </div>
         <div>
-          <p class="font-semibold text-stone-700 mb-1">Hébergement</p>
+          <p class="font-semibold text-ink mb-1">Hébergement</p>
           <p>GitHub, Inc.<br>
           88 Colin P. Kelly Jr Street<br>
           San Francisco, CA 94107<br>
@@ -383,12 +371,12 @@
           https://github.com</p>
         </div>
         <div>
-          <p class="font-semibold text-stone-700 mb-1">Propriété intellectuelle</p>
+          <p class="font-semibold text-ink mb-1">Propriété intellectuelle</p>
           <p>L'ensemble du contenu de ce site (textes, visuels, code) est la propriété exclusive d'Upixto. Toute reproduction, même partielle, est interdite sans autorisation préalable.</p>
         </div>
         <div>
-          <p class="font-semibold text-stone-700 mb-1">Données personnelles & mesure d'audience</p>
-          <p>Ce site utilise <a href="https://plausible.io" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-stone-800 transition">Plausible Analytics</a> pour mesurer son audience de façon anonyme. Aucun cookie n'est déposé sur votre appareil, aucune donnée personnelle n'est collectée, et aucun profil individuel n'est constitué. Les statistiques agrégées produites ne permettent pas de vous identifier. Plausible est conforme au RGPD par conception.</p>
+          <p class="font-semibold text-ink mb-1">Données personnelles & mesure d'audience</p>
+          <p>Ce site utilise <a href="https://plausible.io" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-brand transition">Plausible Analytics</a> pour mesurer son audience de façon anonyme. Aucun cookie n'est déposé sur votre appareil, aucune donnée personnelle n'est collectée, et aucun profil individuel n'est constitué. Les statistiques agrégées produites ne permettent pas de vous identifier. Plausible est conforme au RGPD par conception.</p>
           <p class="mt-2">Les éventuels échanges par e-mail sont traités de manière confidentielle et ne sont pas transmis à des tiers.</p>
         </div>
       </div>
