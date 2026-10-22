@@ -301,24 +301,32 @@
             <p class="font-display text-3xl font-extrabold text-ink">60 €<span class="text-base font-bold"> HT/h</span></p>
           </div>
         </div>
-        <ul class="text-sm text-ink/70 space-y-3 flex-1">
-          <li><strong class="text-ink">À domicile :</strong> 1 heure minimum, puis facturation par demi-heure entamée (20 € / 30 € HT), plus les frais de déplacement de votre zone.</li>
-          <li><strong class="text-ink">À distance :</strong> facturation par demi-heure entamée dès la première demi-heure (20 € / 30 € HT minimum), sans frais de déplacement.</li>
-          <li>Besoin de plusieurs séances ? Parlons-en, un tarif adapté peut être étudié ensemble.</li>
-        </ul>
+        <div class="grid grid-cols-2 gap-3 mb-3">
+          <div class="rounded-xl border border-brand/15 p-4">
+            <p class="font-display font-bold text-ink mb-2">À domicile</p>
+            <ul class="text-sm text-ink/70 space-y-1">
+              <li><strong class="text-ink">1 h minimum</strong></li>
+              <li>puis par demi-heure entamée</li>
+              <li>+ forfait de déplacement</li>
+            </ul>
+          </div>
+          <div class="rounded-xl border border-brand/15 p-4">
+            <p class="font-display font-bold text-ink mb-2">À distance</p>
+            <ul class="text-sm text-ink/70 space-y-1">
+              <li><strong class="text-ink">30 min minimum</strong></li>
+              <li>puis par demi-heure entamée</li>
+              <li>sans frais de déplacement</li>
+            </ul>
+          </div>
+        </div>
+        <p class="text-sm text-ink/70 mb-4">La demi-heure : 20 € pour les particuliers, 30 € HT pour les professionnels.</p>
+        <p class="text-sm text-ink/70 mt-auto">Besoin de plusieurs séances ? Parlons-en, un tarif adapté peut être étudié ensemble.</p>
       </div>
 
       <!-- Frais de déplacement -->
-      <div class="fade-in bg-white rounded-2xl p-5 md:p-6 border border-brand/15 shadow-sm text-left flex flex-col" style="animation-delay: 0.15s;">
+      <div class="fade-in relative z-10 bg-white rounded-2xl p-5 md:p-6 border border-brand/15 shadow-sm text-left flex flex-col" style="animation-delay: 0.15s;">
         <h3 class="font-display text-lg font-bold mb-1">Frais de déplacement</h3>
         <p class="text-sm text-ink/70 mb-4">Un forfait par intervention à domicile, selon votre commune. Identique pour les particuliers et les professionnels.</p>
-
-        <ul class="grid grid-cols-2 gap-2 mb-5" id="travel-zones">
-          <li class="zone-card" data-zone="1"><span class="zone-name">Zone 1 · Proximité</span><span class="zone-price">5 €</span></li>
-          <li class="zone-card" data-zone="2"><span class="zone-name">Zone 2 · Secteur élargi</span><span class="zone-price">15 €</span></li>
-          <li class="zone-card" data-zone="3"><span class="zone-name">Zone 3 · Secteur étendu</span><span class="zone-price">25 €</span></li>
-          <li class="zone-card" data-zone="0"><span class="zone-name">Hors zone</span><span class="zone-price">Sur devis</span></li>
-        </ul>
 
         <label for="commune-input" class="text-sm font-semibold text-ink mb-2">Quelle est ma zone ?</label>
         <div class="relative">
@@ -327,7 +335,15 @@
                  class="w-full rounded-full border border-brand/30 bg-cream px-5 py-3 text-sm text-ink placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-brand">
           <ul id="commune-suggestions" role="listbox" class="hidden absolute left-0 right-0 mt-2 bg-white rounded-2xl border border-brand/15 shadow-lg overflow-hidden z-20"></ul>
         </div>
-        <p id="commune-result" class="mt-3 text-sm text-ink/70 min-h-[1.25rem]" aria-live="polite"></p>
+        <p class="mt-2 text-xs text-ink/50">Distance à vol d'oiseau depuis Devecey.</p>
+        <p id="commune-result" class="mt-2 text-sm text-ink/70 min-h-[1.25rem] mb-4" aria-live="polite"></p>
+
+        <ul class="grid grid-cols-2 gap-2" id="travel-zones">
+          <li class="zone-card" data-zone="1"><span class="zone-name">Zone 1 · Proximité</span><span class="zone-price">5 €</span></li>
+          <li class="zone-card" data-zone="2"><span class="zone-name">Zone 2 · Secteur élargi</span><span class="zone-price">15 €</span></li>
+          <li class="zone-card" data-zone="3"><span class="zone-name">Zone 3 · Secteur étendu</span><span class="zone-price">25 €</span></li>
+          <li class="zone-card" data-zone="0"><span class="zone-name">Hors zone</span><span class="zone-price">Sur devis</span></li>
+        </ul>
       </div>
 
     </div>

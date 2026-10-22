@@ -123,6 +123,10 @@ section {
 }
 
 /* Suggestions de communes */
+#commune-suggestions {
+  background-color: #ffffff;
+}
+
 #commune-suggestions li {
   padding: 0.625rem 1.25rem;
   font-size: 0.875rem;
