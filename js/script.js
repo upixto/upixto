@@ -72,9 +72,9 @@ const GEO_FIELDS = 'nom,code,codesPostaux,centre';
 let deveceyCentre = { lat: 47.3236, lon: 6.0203 };
 
 const ZONES = [
-  { zone: 1, maxKm: 7, label: 'Zone 1 · Proximité', price: '5 €' },
-  { zone: 2, maxKm: 15, label: 'Zone 2 · Secteur élargi', price: '15 €' },
-  { zone: 3, maxKm: 25, label: 'Zone 3 · Secteur étendu', price: '25 €' },
+  { zone: 1, maxKm: 7, label: 'Zone 1', price: '5 €' },
+  { zone: 2, maxKm: 15, label: 'Zone 2', price: '15 €' },
+  { zone: 3, maxKm: 25, label: 'Zone 3', price: '25 €' },
 ];
 
 function distanceKm(a, b) {
