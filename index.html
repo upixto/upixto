@@ -327,7 +327,7 @@
         <h3 class="font-display text-lg font-bold mb-1">Frais de déplacement</h3>
         <p class="text-sm text-ink/70 mb-4">Un forfait par intervention à domicile, selon votre commune. Identique pour les particuliers et les professionnels.</p>
 
-        <label for="commune-input" class="text-sm font-semibold text-ink mb-2">Quelle est ma zone ?</label>
+        <label for="commune-input" class="text-sm font-semibold text-ink mb-2">Votre commune</label>
         <div class="relative">
           <input id="commune-input" type="text" autocomplete="off" placeholder="Code postal ou commune"
                  role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="commune-suggestions"
@@ -338,10 +338,10 @@
         <p id="commune-result" class="mt-2 text-sm text-ink/70 min-h-[1.25rem] mb-4" aria-live="polite"></p>
 
         <ul class="grid grid-cols-2 gap-2" id="travel-zones">
-          <li class="zone-card" data-zone="1"><span class="zone-name">Zone 1</span><span class="zone-price">5 €</span></li>
-          <li class="zone-card" data-zone="2"><span class="zone-name">Zone 2</span><span class="zone-price">15 €</span></li>
-          <li class="zone-card" data-zone="3"><span class="zone-name">Zone 3</span><span class="zone-price">25 €</span></li>
-          <li class="zone-card" data-zone="0"><span class="zone-name">Hors zone</span><span class="zone-price">Sur devis</span></li>
+          <li class="zone-card" data-zone="1"><span class="zone-name">Moins de 7 km</span><span class="zone-price">5 €</span></li>
+          <li class="zone-card" data-zone="2"><span class="zone-name">7 à 15 km</span><span class="zone-price">15 €</span></li>
+          <li class="zone-card" data-zone="3"><span class="zone-name">15 à 25 km</span><span class="zone-price">25 €</span></li>
+          <li class="zone-card" data-zone="0"><span class="zone-name">Plus de 25 km</span><span class="zone-price">Sur devis</span></li>
         </ul>
       </div>
 

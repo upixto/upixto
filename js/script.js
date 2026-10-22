@@ -72,9 +72,9 @@ const GEO_FIELDS = 'nom,code,codesPostaux,centre';
 let deveceyCentre = { lat: 47.3236, lon: 6.0203 };
 
 const ZONES = [
-  { zone: 1, maxKm: 7, label: 'Zone 1', price: '5 €' },
-  { zone: 2, maxKm: 15, label: 'Zone 2', price: '15 €' },
-  { zone: 3, maxKm: 25, label: 'Zone 3', price: '25 €' },
+  { zone: 1, maxKm: 7, price: '5 €' },
+  { zone: 2, maxKm: 15, price: '15 €' },
+  { zone: 3, maxKm: 25, price: '25 €' },
 ];
 
 function distanceKm(a, b) {
@@ -85,8 +85,10 @@ function distanceKm(a, b) {
   return 2 * 6371 * Math.asin(Math.sqrt(h));
 }
 
+// Seuils : moins de 7 km, 7 à 15 km, 15 à 25 km inclus, puis sur devis
 function zoneFor(km) {
-  return ZONES.find(z => km < z.maxKm) || null;
+  if (km > ZONES[ZONES.length - 1].maxKm) return null;
+  return ZONES.find(z => km < z.maxKm) || ZONES[ZONES.length - 1];
 }
 
 function buildCommuneQuery(text) {
@@ -158,11 +160,14 @@ document.addEventListener('DOMContentLoaded', () => {
     input.value = list.children[index].textContent;
     closeList();
     const [lon, lat] = commune.centre.coordinates;
-    const zone = zoneFor(distanceKm(deveceyCentre, { lat, lon }));
+    // Tronquée au dixième pour que la distance affichée corresponde toujours à la tranche
+    const km = Math.floor(distanceKm(deveceyCentre, { lat, lon }) * 10) / 10;
+    const zone = zoneFor(km);
+    const kmText = km.toLocaleString('fr-FR', { maximumFractionDigits: 1 });
     showZone(zone);
     result.innerHTML = zone
-      ? `<strong class="text-ink">${commune.nom}</strong> est en <strong class="text-ink">${zone.label}</strong> : forfait de ${zone.price} par déplacement.`
-      : `<strong class="text-ink">${commune.nom}</strong> est hors zone : <a href="#contact" class="underline underline-offset-2 hover:text-brand transition">contactez-moi</a> pour un devis.`;
+      ? `<strong class="text-ink">${commune.nom}</strong> est à ${kmText} km : forfait de <strong class="text-ink">${zone.price}</strong> par déplacement.`
+      : `<strong class="text-ink">${commune.nom}</strong> est à ${kmText} km : <a href="#contact" class="underline underline-offset-2 hover:text-brand transition">contactez-moi</a> pour un devis.`;
   }
 
   input.addEventListener('input', () => {
