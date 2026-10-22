@@ -53,6 +53,7 @@
     <div class="dot" data-section="2"></div>
     <div class="dot" data-section="3"></div>
     <div class="dot" data-section="4"></div>
+    <div class="dot" data-section="5"></div>
   </div>
 
   <!-- Section 1 : Intro -->
@@ -278,7 +279,81 @@
 
   </section>
 
-  <!-- Section 4 : Contact + Footer -->
+  <!-- Section 4 : Tarifs & déplacements -->
+  <section id="tarifs" class="section-cream md:min-h-screen flex flex-col justify-center items-center text-center px-4 md:px-6 py-14 md:py-12">
+    <h2 class="font-display text-4xl md:text-5xl font-extrabold text-brand mb-3 md:mb-4 fade-in">Tarifs</h2>
+    <p class="text-base md:text-lg text-ink/70 mb-8 md:mb-10 max-w-2xl fade-in" style="animation-delay: 0.1s;">
+      Un tarif horaire unique, à domicile comme à distance. Tout dépassement prévisible vous est annoncé avant d'être engagé.
+    </p>
+
+    <div class="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5">
+
+      <!-- Tarif horaire -->
+      <div class="fade-in bg-white rounded-2xl p-5 md:p-6 border border-brand/15 shadow-sm text-left flex flex-col">
+        <h3 class="font-display text-lg font-bold mb-4">Tarif horaire</h3>
+        <div class="grid grid-cols-2 gap-3 mb-5">
+          <div class="rounded-xl bg-brand-light p-4">
+            <p class="text-xs font-semibold text-brand-dark mb-1">Particuliers</p>
+            <p class="font-display text-3xl font-extrabold text-ink">40 €<span class="text-base font-bold">/h</span></p>
+          </div>
+          <div class="rounded-xl bg-brand-light p-4">
+            <p class="text-xs font-semibold text-brand-dark mb-1">Professionnels</p>
+            <p class="font-display text-3xl font-extrabold text-ink">60 €<span class="text-base font-bold"> HT/h</span></p>
+          </div>
+        </div>
+        <p class="text-xs font-semibold uppercase tracking-[0.15em] text-brand-dark mb-2">Modalités</p>
+        <ul class="divide-y divide-brand/15 border-y border-brand/15 mb-4">
+          <li class="flex items-start gap-3 py-3">
+            <svg class="shrink-0 mt-0.5 text-brand" width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M 4 13 L 14 4 L 24 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M 7 11 L 7 24 L 21 24 L 21 11" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M 12 24 L 12 17 L 16 17 L 16 24" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+            <p class="text-sm text-ink/70"><strong class="text-ink">À domicile :</strong> 1 h minimum, puis par demi-heure entamée, plus le forfait de déplacement.</p>
+          </li>
+          <li class="flex items-start gap-3 py-3">
+            <svg class="shrink-0 mt-0.5 text-brand" width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="3" y="5" width="22" height="15" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M 10 24 L 18 24 M 14 20 L 14 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <p class="text-sm text-ink/70"><strong class="text-ink">À distance :</strong> 30 min minimum, puis par demi-heure entamée, sans frais de déplacement.</p>
+          </li>
+        </ul>
+        <p class="text-sm text-ink/70 mt-auto">Besoin de plusieurs séances ? Parlons-en, un tarif adapté peut être étudié ensemble.</p>
+      </div>
+
+      <!-- Frais de déplacement -->
+      <div class="fade-in relative z-10 bg-white rounded-2xl p-5 md:p-6 border border-brand/15 shadow-sm text-left flex flex-col" style="animation-delay: 0.15s;">
+        <h3 class="font-display text-lg font-bold mb-1">Frais de déplacement</h3>
+        <p class="text-sm text-ink/70 mb-4">Un forfait par intervention à domicile, selon votre commune. Identique pour les particuliers et les professionnels.</p>
+
+        <label for="commune-input" class="text-sm font-semibold text-ink mb-2">Votre commune</label>
+        <div class="relative">
+          <input id="commune-input" type="text" autocomplete="off" placeholder="Code postal ou commune"
+                 role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="commune-suggestions"
+                 class="w-full rounded-full border border-brand/30 bg-cream px-5 py-3 text-sm text-ink placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-brand">
+          <ul id="commune-suggestions" role="listbox" class="hidden absolute left-0 right-0 mt-2 bg-white rounded-2xl border border-brand/15 shadow-lg overflow-hidden z-20"></ul>
+        </div>
+        <p class="mt-2 text-xs text-ink/50">Distance à vol d'oiseau depuis Devecey.</p>
+        <p id="commune-result" class="mt-2 text-sm text-ink/70 min-h-[1.25rem] mb-4" aria-live="polite"></p>
+
+        <ul class="grid grid-cols-2 gap-2" id="travel-zones">
+          <li class="zone-card" data-zone="1"><span class="zone-name">Moins de 7 km</span><span class="zone-price">5 €</span></li>
+          <li class="zone-card" data-zone="2"><span class="zone-name">7 à 15 km</span><span class="zone-price">15 €</span></li>
+          <li class="zone-card" data-zone="3"><span class="zone-name">15 à 25 km</span><span class="zone-price">25 €</span></li>
+          <li class="zone-card" data-zone="0"><span class="zone-name">Plus de 25 km</span><span class="zone-price">Sur devis</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <p class="mt-6 text-xs text-ink/60 max-w-2xl fade-in" style="animation-delay: 0.3s;">
+      TVA non applicable, art. 293 B du CGI.<br>
+      Le matériel et les logiciels achetés restent à la charge du client.
+    </p>
+  </section>
+
+  <!-- Section 5 : Contact + Footer -->
   <section id="contact" class="section-brand md:min-h-screen flex flex-col justify-center items-center px-6 py-14 md:py-0">
     <div class="w-full max-w-3xl text-center">
       <h2 class="font-display text-5xl md:text-6xl font-extrabold text-white mb-4 fade-in">Contactez-moi</h2>
