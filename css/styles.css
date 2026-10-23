@@ -236,7 +236,7 @@ h1, h2, h3 {
   transform: scale(1.4);
 } 
 
-/* Carrousel des expériences en entreprise */
+/* Carrousel des exemples de missions en entreprise */
 .carousel-track {
   display: flex;
   gap: 1rem;

@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Modales (mentions légales, expériences en entreprise)
+// Modales (mentions légales, exemples de missions)
 document.addEventListener('DOMContentLoaded', () => {
   let openedModal = null;
 
@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Carrousel des expériences en entreprise
+// Carrousel des exemples de missions en entreprise
 document.addEventListener('DOMContentLoaded', () => {
   const track = document.getElementById('xp-track');
   if (!track) return;
@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dot = document.createElement('button');
     dot.type = 'button';
     dot.className = 'carousel-dot';
-    dot.setAttribute('aria-label', `Expérience ${i + 1}`);
+    dot.setAttribute('aria-label', `Mission ${i + 1}`);
     dot.addEventListener('click', () => goTo(i));
     dotsContainer.appendChild(dot);
     return dot;

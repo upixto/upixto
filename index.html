@@ -186,21 +186,23 @@
 
     </div>
 
-    <!-- À propos + expériences en entreprise -->
-    <div id="a-propos" class="mt-5 md:mt-8 max-w-5xl w-full flex flex-col md:flex-row items-center gap-4 md:gap-6 bg-cream rounded-2xl p-5 md:p-6 border border-brand/15 shadow-sm text-center md:text-left fade-in" style="animation-delay: 0.5s;">
+    <!-- Exemples de missions en entreprise -->
+    <button type="button" class="open-xp-modal mt-6 md:mt-8 inline-flex items-center gap-2 text-brand-dark font-semibold py-2.5 px-6 rounded-full border-2 border-brand/40 hover:bg-brand-light transition duration-300 fade-in" style="animation-delay: 0.5s;">
+      <svg width="18" height="18" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="3" y="10" width="22" height="15" rx="2" stroke="currentColor" stroke-width="2"/>
+        <path d="M 9 10 L 9 7 C 9 5.5, 10.5 4, 14 4 C 17.5 4, 19 5.5, 19 7 L 19 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      Exemples de missions en entreprise
+    </button>
+
+    <!-- À propos -->
+    <div id="a-propos" class="mt-8 md:mt-10 max-w-3xl w-full flex flex-col sm:flex-row items-center gap-4 sm:gap-5 bg-brand rounded-2xl p-5 md:p-6 shadow-md text-center sm:text-left fade-in" style="animation-delay: 0.6s;">
       <!-- Photo liée à tom-roth.fr : elle suit automatiquement les mises à jour du site perso -->
       <img src="https://tom-roth.fr/files/photo-tom_roth.jpg" alt="Tom Roth" width="72" height="72" loading="lazy" class="shrink-0 w-[72px] h-[72px] rounded-full object-cover border-2 border-white shadow-md bg-brand-light">
-      <div class="flex-1 text-sm text-ink/70">
-        <p class="font-display text-lg font-bold text-ink mb-1">Tom Roth, à votre service</p>
-        <p>Ingénieur informatique diplômé de Polytech Dijon, j'ai été développeur, technicien support puis chargé d'études dans l'assurance avant de créer Upixto, pour vous rendre autonomes avec le numérique. <a href="https://tom-roth.fr" target="_blank" rel="noopener noreferrer" class="font-semibold text-brand-dark underline underline-offset-2 hover:text-brand transition">En savoir plus</a></p>
+      <div class="text-sm text-white/90">
+        <p class="font-display text-lg font-bold text-white mb-1">Tom Roth, à votre service</p>
+        <p>Ingénieur informatique diplômé de Polytech Dijon, j'ai été développeur, technicien support puis chargé d'études dans l'assurance avant de créer Upixto, pour vous rendre autonomes avec le numérique. <a href="https://tom-roth.fr" target="_blank" rel="noopener noreferrer" class="font-semibold text-white underline underline-offset-2 hover:opacity-75 transition">En savoir plus</a></p>
       </div>
-      <button type="button" class="open-xp-modal shrink-0 inline-flex items-center gap-2 text-sm text-brand-dark font-semibold py-2.5 px-5 rounded-full border-2 border-brand/40 hover:bg-brand-light transition duration-300">
-        <svg width="16" height="16" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect x="3" y="10" width="22" height="15" rx="2" stroke="currentColor" stroke-width="2"/>
-          <path d="M 9 10 L 9 7 C 9 5.5, 10.5 4, 14 4 C 17.5 4, 19 5.5, 19 7 L 19 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-        Mes expériences en entreprise
-      </button>
     </div>
 
   </section>
@@ -368,7 +370,7 @@
     </div>
   </div>
 
-  <!-- Modale expériences en entreprise -->
+  <!-- Modale exemples de missions en entreprise -->
   <div id="xp-modal" class="fixed inset-0 z-[200] flex items-center justify-center p-4 md:p-6 hidden" role="dialog" aria-modal="true" aria-labelledby="xp-modal-title">
     <div class="absolute inset-0 bg-ink/60 backdrop-blur-sm" data-close-modal></div>
     <div class="relative bg-cream rounded-2xl shadow-xl max-w-xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-8 z-10">
@@ -378,8 +380,8 @@
           <line x1="16" y1="4" x2="4" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
       </button>
-      <p class="text-xs uppercase tracking-[0.25em] font-semibold text-brand-dark mb-1">En entreprise</p>
-      <h2 id="xp-modal-title" class="font-display text-2xl font-extrabold mb-5 text-brand">Mes expériences</h2>
+      <p class="text-xs uppercase tracking-[0.25em] font-semibold text-brand-dark mb-1">Upixto en entreprise</p>
+      <h2 id="xp-modal-title" class="font-display text-2xl font-extrabold mb-5 text-brand">Exemples de missions</h2>
 
       <div class="carousel">
         <div class="carousel-track" id="xp-track">
@@ -447,11 +449,11 @@
         </div>
 
         <div class="flex items-center justify-between mt-5">
-          <button type="button" class="carousel-btn" id="xp-prev" aria-label="Expérience précédente">
+          <button type="button" class="carousel-btn" id="xp-prev" aria-label="Mission précédente">
             <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M 12 4 L 6 10 L 12 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <div class="flex gap-2" id="xp-dots"></div>
-          <button type="button" class="carousel-btn" id="xp-next" aria-label="Expérience suivante">
+          <button type="button" class="carousel-btn" id="xp-next" aria-label="Mission suivante">
             <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M 8 4 L 14 10 L 8 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
         </div>
