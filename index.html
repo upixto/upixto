@@ -186,13 +186,22 @@
 
     </div>
 
-    <button type="button" class="open-xp-modal mt-8 md:mt-10 inline-flex items-center gap-2 text-brand-dark font-semibold py-3 px-7 rounded-full border-2 border-brand/40 hover:bg-brand-light transition duration-300 fade-in" style="animation-delay: 0.5s;">
-      <svg width="18" height="18" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <rect x="3" y="10" width="22" height="15" rx="2" stroke="currentColor" stroke-width="2"/>
-        <path d="M 9 10 L 9 7 C 9 5.5, 10.5 4, 14 4 C 17.5 4, 19 5.5, 19 7 L 19 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-      Mes expériences en entreprise
-    </button>
+    <!-- À propos + expériences en entreprise -->
+    <div id="a-propos" class="mt-5 md:mt-8 max-w-5xl w-full flex flex-col md:flex-row items-center gap-4 md:gap-6 bg-cream rounded-2xl p-5 md:p-6 border border-brand/15 shadow-sm text-center md:text-left fade-in" style="animation-delay: 0.5s;">
+      <!-- Photo liée à tom-roth.fr : elle suit automatiquement les mises à jour du site perso -->
+      <img src="https://tom-roth.fr/files/photo-tom_roth.jpg" alt="Tom Roth" width="72" height="72" loading="lazy" class="shrink-0 w-[72px] h-[72px] rounded-full object-cover border-2 border-white shadow-md bg-brand-light">
+      <div class="flex-1 text-sm text-ink/70">
+        <p class="font-display text-lg font-bold text-ink mb-1">Tom Roth, à votre service</p>
+        <p>Ingénieur informatique diplômé de Polytech Dijon, j'ai été développeur, technicien support puis chargé d'études dans l'assurance avant de créer Upixto, pour vous rendre autonomes avec le numérique. <a href="https://tom-roth.fr" target="_blank" rel="noopener noreferrer" class="font-semibold text-brand-dark underline underline-offset-2 hover:text-brand transition">En savoir plus</a></p>
+      </div>
+      <button type="button" class="open-xp-modal shrink-0 inline-flex items-center gap-2 text-sm text-brand-dark font-semibold py-2.5 px-5 rounded-full border-2 border-brand/40 hover:bg-brand-light transition duration-300">
+        <svg width="16" height="16" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="3" y="10" width="22" height="15" rx="2" stroke="currentColor" stroke-width="2"/>
+          <path d="M 9 10 L 9 7 C 9 5.5, 10.5 4, 14 4 C 17.5 4, 19 5.5, 19 7 L 19 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        Mes expériences en entreprise
+      </button>
+    </div>
 
   </section>
 
@@ -300,22 +309,6 @@
         Basé à Devecey, j'interviens à domicile et en entreprise dans le <strong>Doubs</strong> et la <strong>Haute-Saône</strong>.
         Vous habitez un peu plus loin ? Contactez-moi, nous verrons ensemble ce qui est possible.
       </p>
-
-      <!-- À propos -->
-      <div id="a-propos" class="mt-10 mx-auto max-w-2xl flex flex-col sm:flex-row items-center gap-4 sm:gap-5 bg-white/10 border border-white/25 rounded-2xl p-5 text-center sm:text-left fade-in" style="animation-delay: 0.4s;">
-        <!-- Photo liée à tom-roth.fr : elle suit automatiquement les mises à jour du site perso -->
-        <img src="https://tom-roth.fr/files/photo-tom_roth.jpg" alt="Tom Roth" width="80" height="80" loading="lazy" class="shrink-0 w-20 h-20 rounded-full object-cover border-2 border-white shadow-md bg-brand-light">
-        <div class="text-sm text-white/90">
-          <p class="font-display text-lg font-bold text-white mb-1">Tom Roth, à votre service</p>
-          <p class="mb-2">Ingénieur informatique diplômé de Polytech Dijon, j'ai été développeur, technicien support puis chargé d'études dans l'assurance avant de créer Upixto, pour vous rendre autonomes avec vos outils.</p>
-          <a href="https://tom-roth.fr" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-semibold text-white underline underline-offset-2 hover:opacity-75 transition">
-            En savoir plus sur tom-roth.fr
-            <svg width="14" height="14" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M 7 4 L 16 4 L 16 13 M 16 4 L 4 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-        </div>
-      </div>
     </div>
 
     <!-- Footer intégré -->
