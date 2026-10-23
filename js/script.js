@@ -206,3 +206,88 @@ document.addEventListener('DOMContentLoaded', () => {
 
   input.addEventListener('blur', closeList);
 });
+
+
+// Modales (mentions légales, expériences en entreprise)
+document.addEventListener('DOMContentLoaded', () => {
+  let openedModal = null;
+
+  function openModal(modal) {
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    openedModal = modal;
+  }
+
+  function closeModal() {
+    if (!openedModal) return;
+    openedModal.classList.add('hidden');
+    document.body.style.overflow = '';
+    openedModal = null;
+  }
+
+  [['.open-legal-modal', 'legal-modal'], ['.open-xp-modal', 'xp-modal']].forEach(([trigger, id]) => {
+    const modal = document.getElementById(id);
+    if (!modal) return;
+    document.querySelectorAll(trigger).forEach(el => el.addEventListener('click', e => { e.preventDefault(); openModal(modal); }));
+    modal.querySelectorAll('[data-close-modal]').forEach(el => el.addEventListener('click', closeModal));
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeModal();
+    if (openedModal && openedModal.id === 'xp-modal') {
+      if (e.key === 'ArrowLeft') document.getElementById('xp-prev').click();
+      if (e.key === 'ArrowRight') document.getElementById('xp-next').click();
+    }
+  });
+});
+
+// Carrousel des expériences en entreprise
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.getElementById('xp-track');
+  if (!track) return;
+  const slides = track.querySelectorAll('.carousel-slide');
+  const dotsContainer = document.getElementById('xp-dots');
+  const prev = document.getElementById('xp-prev');
+  const next = document.getElementById('xp-next');
+  let current = 0;
+
+  const dots = Array.from(slides, (_, i) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'carousel-dot';
+    dot.setAttribute('aria-label', `Expérience ${i + 1}`);
+    dot.addEventListener('click', () => goTo(i));
+    dotsContainer.appendChild(dot);
+    return dot;
+  });
+
+  function update(index) {
+    current = index;
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+    prev.disabled = index === 0;
+    next.disabled = index === slides.length - 1;
+  }
+
+  function goTo(index) {
+    const target = Math.max(0, Math.min(index, slides.length - 1));
+    track.scrollTo({ left: slides[target].offsetLeft - track.offsetLeft, behavior: 'smooth' });
+    update(target);
+  }
+
+  prev.addEventListener('click', () => goTo(current - 1));
+  next.addEventListener('click', () => goTo(current + 1));
+
+  // Suivi du swipe sur mobile
+  let ticking = false;
+  track.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const index = Math.round(track.scrollLeft / track.clientWidth);
+      if (index !== current) update(index);
+      ticking = false;
+    });
+  }, { passive: true });
+
+  update(0);
+});

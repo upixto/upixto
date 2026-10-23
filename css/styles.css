@@ -237,3 +237,55 @@ h1, h2, h3 {
   box-shadow: 0 0 0 2px #ffffff;
   transform: scale(1.4);
 } 
+
+/* Carrousel des expériences en entreprise */
+.carousel-track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+
+.carousel-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 2px solid rgba(225, 86, 39, 0.4);
+  color: #B9431B;
+  transition: all 0.3s ease;
+}
+
+.carousel-btn:hover:not(:disabled) {
+  background-color: #FCE3D6;
+}
+
+.carousel-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background-color: rgba(225, 86, 39, 0.3);
+  transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+  width: 22px;
+  background-color: #E15627;
+}
